@@ -228,16 +228,7 @@
   </div>
 </section>
 
-<section class="container mt-5">
-  <div class="row">
-    <div class="offset-md-1 col-md-10 bg-grey">
-      <div class="newsletter-home">
-
-      newsletter
-      </div>
-    </div>
-  </div>
-</section>
+<?php componente_newsletter() ?>
 
 <section class="container-fluid bg-grey mt-5">
   <div class="row">

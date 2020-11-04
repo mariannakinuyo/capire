@@ -2,8 +2,6 @@
 
 git clone no projeto
 
-## Compilar sass
-
 Para compilar o scss:
 
     sass --watch scss/style.scss:css/style.css

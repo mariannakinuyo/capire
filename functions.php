@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Componentes
+ */
+include dirname(__FILE__) . '/template_partes/newsletter.php';
+
+
 // Registra as sidebars
 function tutsup_sidebars()	{
 	register_sidebar( array(
