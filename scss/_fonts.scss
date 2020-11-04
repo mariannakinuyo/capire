@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Fakt Pro';
+  src: url('../fonts/FaktPro-Light.eot');
+  src: url('../fonts/FaktPro-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FaktPro-Light.woff') format('woff'),
+       url('../fonts/FaktPro-Light.ttf')  format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Fakt Pro';
+  src: url('../fonts/FaktPro-LightItalic.eot');
+  src: url('../fonts/FaktPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FaktPro-LightItalic.woff') format('woff'),
+       url('../fonts/FaktPro-LightItalic.ttf')  format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fakt Pro';
+  src: url('../fonts/FaktPro-Medium.eot');
+  src: url('../fonts/FaktPro-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FaktPro-Medium.woff') format('woff'),
+       url('../fonts/FaktPro-Medium.ttf')  format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Fakt Pro';
+  src: url('../fonts/FaktPro-MediumItalic.eot');
+  src: url('../fonts/FaktPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FaktPro-MediumItalic.woff') format('woff'),
+       url('../fonts/FaktPro-MediumItalic.ttf')  format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+$font-primary: 'Fakt Pro', sans-serif;

@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../fonts/FaktPro-Light.eot");
+  src: url("../fonts/FaktPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FaktPro-Light.woff") format("woff"), url("../fonts/FaktPro-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../fonts/FaktPro-LightItalic.eot");
+  src: url("../fonts/FaktPro-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FaktPro-LightItalic.woff") format("woff"), url("../fonts/FaktPro-LightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../fonts/FaktPro-Medium.eot");
+  src: url("../fonts/FaktPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FaktPro-Medium.woff") format("woff"), url("../fonts/FaktPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../fonts/FaktPro-MediumItalic.eot");
+  src: url("../fonts/FaktPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/FaktPro-MediumItalic.woff") format("woff"), url("../fonts/FaktPro-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+html, body {
+  font-family: "Fakt Pro", sans-serif;
+  color: #333333;
+  font-size: 18px;
+}
+html.overflow-hidden, body.overflow-hidden {
+  overflow-y: hidden;
+}
+
+strong, b {
+  font-weight: 500;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body a, body a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, .bg-hero-picinguaba h5, .bg-hero-catucaba h5 {
+  font-weight: 500;
+}
+
+h3, h4, h5, h6, .h6, p, span, .small {
+  font-weight: 200;
+}
+
+p {
+  font-size: 1em;
+}
+p.price {
+  font-size: 1.18em;
+}
+p.host {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+p.subtitle {
+  font-size: 0.818em;
+}
+p.small {
+  font-size: 0.818em;
+}
+
+h1 {
+  font-size: 2.18em;
+}
+h1.big {
+  font-size: 2.27em;
+}
+h1.bigger {
+  font-size: 2.727em;
+}
+
+h2 {
+  font-size: 1.818em;
+}
+
+h3 {
+  font-size: 1.636em;
+}
+
+h4 {
+  font-size: 1.454em;
+}
+
+h5 {
+  font-size: 1.363em;
+}
+
+h6 {
+  font-size: 1.09em;
+}
+h6.txt-timeline {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.h6 {
+  font-size: 1.09em;
+}
+
+span {
+  font-size: 0.54em;
+}
+span.big {
+  font-size: 0.72em;
+}
+
+.button {
+  padding: 6px 15px;
+  margin-top: 13px;
+  margin-right: 30px;
+  background-color: purple;
+}
+@media screen and (max-width: 768px) {
+  .button {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}
+
+.button-download {
+  color: white;
+  background-image: url(http://mulheresnapandemia.sof.org.br/wp-content/themes/sofgn/photos/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  .button-download {
+    font-size: 10px;
+    background-image: unset;
+    padding-left: 5px;
+  }
+}
+
+.button-play {
+  background-image: url(http://mulheresnapandemia.sof.org.br/wp-content/themes/sofgn/photos/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 38px;
+  margin-top: 13px;
+  margin-right: 27px;
+}
+@media screen and (max-width: 768px) {
+  .button-play {
+    display: none;
+  }
+}
+
+.social-lang {
+  background-color: #DEDEDE;
+  height: 34px;
+}
+
+.social {
+  padding-top: 4px;
+}
+.social a {
+  display: inline-block;
+}
+
+.facebook span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-facebook.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-facebook.svg) no-repeat center;
+  margin: auto;
+  display: block;
+}
+
+.twitter span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-twitter.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-twitter.svg) no-repeat center;
+  margin: auto;
+  display: block;
+}
+
+.instagram span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-instagram.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-instagram.svg) no-repeat center;
+  margin: auto;
+  display: block;
+}
+
+.logo-menu {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.list-menu ul {
+  margin-bottom: 7px;
+}
+.list-menu ul li {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 16px;
+}
+.list-menu ul li:last-of-type {
+  margin-right: 0px;
+}
+
+.list-tags {
+  text-align: center;
+}
+.list-tags ul {
+  margin-bottom: 7px;
+}
+.list-tags ul li {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 14px;
+}
+.list-tags ul li:last-of-type {
+  margin-right: 0px;
+}
+
+header a {
+  color: black;
+}
+header a:hover {
+  opacity: 0.8;
+}
+
+.b-bottom {
+  border-bottom: 1px solid black;
+}
+
+footer {
+  font-family: "Fakt Pro", sans-serif;
+  background-color: #231e32;
+  padding: 50px 0;
+}
+footer .menu li.current-menu-item a {
+  font-weight: 200;
+  border-bottom: 1px solid white;
+}
+footer .menu li a {
+  font-weight: 200;
+}
+footer span {
+  font-weight: 200;
+  font-size: 0.85em;
+}
+
+.card-image {
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ico-instagram {
+  background: url("../images/icons/ico-instagram.svg") no-repeat center/contain;
+  height: 38px;
+  width: 38px;
+  display: block;
+}
+
+.ico-arrow {
+  background: url("../images/icons/ico-arrow.svg") no-repeat center/contain;
+  height: 18px;
+  width: 26px;
+  margin-left: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 0.4s;
+}
+
+.ico-submit {
+  background: url("../images/icons/ico-submit.svg") no-repeat center/contain;
+  height: 14px;
+  width: 17px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.article {
+  margin-bottom: 68px;
+}
+
+.article-content p {
+  margin: 0;
+}
+
+.bg-grey {
+  background-color: #DEDEDE;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-hero-slide {
+  height: 365px;
+}
+
+.home .carousel.hero-slide .carousel-cell {
+  width: 100%;
+  height: 356px;
+}
+.home .carousel.hero-slide button {
+  display: none;
+}
+.home .hero-slide-cat {
+  font-size: 12px;
+}
+
+.col-reg {
+  width: 20%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.box-reg .img-reg-home {
+  height: 129px;
+  width: 100%;
+}
+.box-reg .cat-reg {
+  background-color: grey;
+}
+
+.box-cats-home .img-cats-home {
+  height: 195px;
+}
+
+.slide-video-home {
+  height: 474px;
+  width: 100%;
+}
+
+.slide-video {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

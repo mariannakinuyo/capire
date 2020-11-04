@@ -1,0 +1,60 @@
+.bg-grey {
+    background-color: #DEDEDE
+}
+
+.bg-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-hero-slide {
+    height: 365px;
+}
+
+.home {
+    .carousel.hero-slide {
+        .carousel-cell {
+            width: 100%;
+            height: 356px;
+        }
+        button {
+            display: none;
+        }
+    }
+
+    .hero-slide-cat {
+        font-size: 12px;
+    }
+}
+
+.col-reg {
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.box-reg {
+    .img-reg-home {
+        height: 129px;
+        width: 100%;
+    }
+    .cat-reg {
+        background-color: grey;
+    }
+}
+
+.box-cats-home {
+    .img-cats-home {
+        height: 195px;
+    }
+}
+
+.slide-video-home {
+    height: 474px;
+    width: 100%;
+}
+
+.slide-video {
+    width: 100%;
+}

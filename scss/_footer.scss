@@ -1,0 +1,20 @@
+footer {
+  font-family: $font-primary;
+  background-color: $darkblue;
+  padding: 50px 0;
+  .menu li {
+    &.current-menu-item {
+      a{
+        font-weight: 200;
+        border-bottom: 1px solid white;
+      }
+    }
+    a{
+      font-weight: 200;
+    }
+  }
+  span {
+    font-weight: 200;
+    font-size: .85em;
+  }
+}

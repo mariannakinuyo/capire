@@ -1,0 +1,89 @@
+
+html, body {
+  font-family: $font-primary;
+  color: $grey;
+  font-size: 18px; //22px
+  &.overflow-hidden {
+    overflow-y: hidden;
+  }
+}
+
+// html {
+//   margin: 0px !important;
+// }
+
+strong, b {
+  font-weight: 500;
+}
+
+body {
+  a, a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, .bg-hero-picinguaba h5, .bg-hero-catucaba h5 {
+  font-weight: 500;
+}
+h3, h4, h5, h6, .h6, p, span, .small {
+  font-weight: 200;
+}
+
+p {
+  font-size: 1em; //22px
+  &.price {
+    font-size: 1.18em; //26px
+  }
+  &.host {
+    font-size: 0.90em; //20px;
+    font-weight: 500;
+  }
+  &.subtitle {
+    font-size: 0.818em; //18px
+  }
+  &.small {
+    font-size:  0.818em; //18px
+  }
+}
+
+h1 {
+  font-size: 2.18em; //48px
+  &.big {
+    font-size: 2.27em; //50px
+  }
+  &.bigger {
+    font-size: 2.727em; //60px
+  }
+}
+h2 {
+  font-size: 1.818em; //40px
+}
+h3 {
+  font-size: 1.636em; //36px
+}
+h4 {
+  font-size: 1.454em; //32px
+}
+h5 {
+  font-size: 1.363em; //30px
+}
+h6 {
+  font-size: 1.09em; //24px
+  &.txt-timeline {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+.h6 {
+  font-size: 1.09em; //24px
+}
+
+span {
+  font-size: 0.54em; //12px
+  &.big {
+    font-size: 0.72em; //16px
+  }
+}
