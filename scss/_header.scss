@@ -130,3 +130,19 @@ header {
 .b-bottom {
   border-bottom: 1px solid black;
 }
+
+.menu-language {
+  display: inline-block;
+  ul li {
+    display: inline-block;
+  }
+  .sub-menu {
+    display: inline-block;
+  }
+}
+
+header {
+  ::marker {
+    color: #fff;
+  }
+}

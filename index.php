@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <section class="container-fluid">
   <div class="row bg-grey">
     <div class="col-md-6 offset-md-3">
@@ -56,72 +54,8 @@
 </section>
 
 
+<?php componente_regioes() ?>
 
-<section class="container-fluid bg-grey">
-  <div class="container">
-    <div class="row mt-5">
-      <div class="col-12">
-        <h3>Navegue por regiões</h3>
-      </div>
-
-      <div class="col-reg">
-        <div class="box-reg">
-          <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
-          <span class="cat-reg">categoria</span>
-          </div>
-          <span>categoria</span>
-          <span>20/12/2020</span>
-          <h5>titulo lorem ipsum dolor amet</h5>
-        </div>
-      </div>
-
-      <div class="col-reg">
-        <div class="box-reg">
-          <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
-          <span class="cat-reg">categoria</span>
-          </div>
-          <span>categoria</span>
-          <span>20/12/2020</span>
-          <h5>titulo lorem ipsum dolor amet</h5>
-        </div>
-      </div>
-
-      <div class="col-reg">
-        <div class="box-reg">
-          <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
-          <span class="cat-reg">categoria</span>
-          </div>
-          <span>categoria</span>
-          <span>20/12/2020</span>
-          <h5>titulo lorem ipsum dolor amet</h5>
-        </div>
-      </div>
-
-      <div class="col-reg">
-        <div class="box-reg">
-          <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
-          <span class="cat-reg">categoria</span>
-          </div>
-          <span>categoria</span>
-          <span>20/12/2020</span>
-          <h5>titulo lorem ipsum dolor amet</h5>
-        </div>
-      </div>
-
-      <div class="col-reg">
-        <div class="box-reg">
-          <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
-          <span class="cat-reg">categoria</span>
-          </div>
-          <span>categoria</span>
-          <span>20/12/2020</span>
-          <h5>titulo lorem ipsum dolor amet</h5>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <section class="container">
   <div class="row">
@@ -211,15 +145,29 @@
 
       <div class="carousel" data-flickity='{ "freeScroll": true }'>
 
-        <div class="carousel-cell slide-video">
-          <div class="bg-img slide-video-home" style="background-image: url(http://localhost:8000/wp-content/uploads/2020/10/architecture-buildings-city-fog-373965-scaled.jpg)"></div>
-          <h3>titulo lorem lorem lorem</h3>
-        </div>
+        <?php 
+        $posts_midias = new WP_Query( array(
+          'post_type'      => 'post',
+          'post_status'    => 'publish',
+          'posts_per_page' => 4,
+          'tax_query'      => array(
+            array(
+              'taxonomy' => 'category',
+              'field'    => 'slug',
+              'terms'    => 'multimidia',
+            ),
+          ),
+        ) );
+        
+        foreach ( $posts_midias->posts as $post ) {
+        ?>
 
-        <div class="carousel-cell slide-video">
-          <div class="bg-img slide-video-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-          <h3>titulo lorem lorem lorem</h3>
-        </div>
+          <div class="carousel-cell slide-video">
+            <div class="bg-img slide-video-home" style="background-image: url(http://localhost:8000/wp-content/uploads/2020/10/architecture-buildings-city-fog-373965-scaled.jpg)"></div>
+            <h3><?php echo get_the_title( $post->ID ); ?></h3>
+          </div>
+        
+        <?php } ?>
 
       </div>
 
