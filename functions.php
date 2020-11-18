@@ -4,6 +4,8 @@
  * Componentes
  */
 include dirname(__FILE__) . '/template_partes/newsletter.php';
+include dirname(__FILE__) . '/template_partes/regioes.php';
+
 
 
 // Registra as sidebars

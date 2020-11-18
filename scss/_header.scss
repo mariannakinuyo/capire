@@ -10,42 +10,11 @@
   }
 }
 
-.button-download {
-  color: white;
-  background-image: url(http://mulheresnapandemia.sof.org.br/wp-content/themes/sofgn/photos/arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: left;
-  padding-left: 35px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 17px;
-  @media screen and (max-width: 768px) {
-    font-size: 10px;
-    background-image: unset;
-    padding-left: 5px;
-  }
-}
-
-.button-play {
-  background-image: url(http://mulheresnapandemia.sof.org.br/wp-content/themes/sofgn/photos/icon-play.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 44px;
-  height: 38px;
-  margin-top: 13px;
-  margin-right: 27px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-
 //aqui
 
-.social-lang {
-  background-color: #DEDEDE;
-  height: 34px;
-
-}
+// .social-lang {
+//   background-color: #DEDEDE;
+// }
 
 .social {
   padding-top: 4px;
@@ -58,30 +27,55 @@
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-facebook.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-facebook.svg) no-repeat center;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
   margin: auto;
   display: block;
+  margin-right: 5px;
 }
 
 .twitter span {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-twitter.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-twitter.svg) no-repeat center;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
   margin: auto;
   display: block;
+  margin-right: 5px;
 }
 
 .instagram span {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-instagram.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof/images/icon-instagram.svg) no-repeat center;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
   margin: auto;
   display: block;
+  margin-right: 5px;
+}
+
+.whatsapp span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.telegram span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
 }
 
 .logo-menu {
@@ -101,6 +95,17 @@
       margin-right: 0px;
     }
   }
+  ul.sub-menu {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    text-align: left;
+    background-color: white;
+    z-index: 10;
+    li.menu-item {
+      display: block;
+    }
+  }
 }
 
 .list-tags {
@@ -111,10 +116,14 @@
   ul li {
     display: inline-block;
     margin-right: 24px;
-    font-size: 14px;
+    FONT-SIZE: 12px;
     &:last-of-type {
       margin-right: 0px;
     }
+  }
+  a {
+    text-transform: lowercase;
+    FONT-SIZE: 12px;
   }
 }
 
@@ -127,6 +136,60 @@ header {
   }
 }
 
-.b-bottom {
-  border-bottom: 1px solid black;
+.b-bottom::after {
+  content: "";
+  display: block;
+  background: linear-gradient(to left , #663399, #CC3333);
+  height: 1px;
+  width: 100%;
+}
+
+.menu-language {
+  display: inline-block;
+  margin: 0px;
+  li {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+header {
+  ::marker {
+    color: #fff;
+  }
+}
+
+.down span {
+  width: 8px;
+  height: 8px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+li.menu-item-has-children::after {
+  content:'';
+  background-image: url('http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg');
+  width: 8px;
+  height: 6px;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.button-doe {
+  padding: 2px 13px;
+  font-size: 12px;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: var(--purple);
+  margin-left: 10px;
+  a {
+    color: #fff;
+  }
+  @media screen and (max-width: 768px) {
+    
+  }
 }
