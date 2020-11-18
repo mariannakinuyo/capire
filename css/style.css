@@ -265,7 +265,6 @@ header a:hover {
 
 .menu-language {
   display: inline-block;
-<<<<<<< HEAD
   margin: 0px;
 }
 .menu-language li {
@@ -300,7 +299,7 @@ li.menu-item-has-children::after {
 .button-doe {
   padding: 2px 13px;
   font-size: 12px;
-  border-radius: 2px;
+  border-radius: 3px;
   display: inline-block;
   background-color: var(--purple);
   margin-left: 10px;
@@ -308,20 +307,6 @@ li.menu-item-has-children::after {
 .button-doe a {
   color: #fff;
 }
-=======
-}
-.menu-language ul li {
-  display: inline-block;
-}
-.menu-language .sub-menu {
-  display: inline-block;
-}
-
-header ::marker {
-  color: #fff;
-}
-
->>>>>>> 9c52904aa7fa077c1a093204e6289115d108eeb6
 footer {
   font-family: "Fakt Pro", sans-serif;
   background-color: #231e32;

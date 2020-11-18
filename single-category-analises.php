@@ -43,6 +43,7 @@
 
                 <h1><?php the_title(); ?></h1>
                 <h3><?php echo $linha_fina ?></h3>
+                <p><?php the_author() ?></p>
 
             </div>
 
@@ -63,7 +64,6 @@
             <article>
 
                 <p><?php the_content(); ?></p>
-                <p><?php the_author() ?></p>
 
             </article>
 
