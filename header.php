@@ -46,7 +46,6 @@
           </div>
         </div>
       </div>
-      
     </div>
   </div>
   <div class="text-center b-bottom">
