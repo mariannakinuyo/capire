@@ -1,5 +1,50 @@
 <?php wp_footer(); ?>
 
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div>
+                        <img class="logo" src="https://via.placeholder.com/206x66" alt="logo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
+                        <p class="ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <p class="small">NOME DO SITE</p>
+                    <?php  wp_nav_menu( array( 'menu' => 'footer', 'container' => FALSE, 'menu_class' => 'menu-footer', 'menu_id' => false ) ); ?>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <p class="small">SIGA NOSSAS REDES</p>
+                    <div class="social">
+                        <a href="" class="facebook">
+                            <span></span>
+                        </a>
+                        <a href="" class="instagram">
+                            <span></span>
+                        </a>
+                        <a href="" class="twitter">
+                            <span></span>
+                        </a>
+                        <a href="" class="whatsapp">
+                            <span></span>
+                        </a>
+                        <a href="" class="telegram">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

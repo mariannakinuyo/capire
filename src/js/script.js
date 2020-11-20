@@ -18,3 +18,14 @@ $(regioes).click(function () {
     }
     
 });
+
+
+$(document).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+        if (scrollTop >= 10 ) {
+            $('.menu-principal').addClass("scroll");
+        }
+        else{
+            $('.menu-principal').removeClass("scroll");
+        }
+  });

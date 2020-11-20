@@ -1,3 +1,12 @@
+:root {
+  --dark: #333;
+  --white: #FFF;
+  --purple: #663399;
+  --red: #CC3333;
+  --font-oswald: "Oswald", sans-serif;
+  --font-lato: "Lato", sans-serif;
+}
+
 @font-face {
   font-family: "Fakt Pro";
   src: url("../fonts/FaktPro-Light.eot");
@@ -25,7 +34,7 @@
   font-style: italic;
 }
 html, body {
-  font-family: "Fakt Pro", sans-serif;
+  font-family: var(--font-lato);
   color: #333333;
   font-size: 18px;
 }
@@ -38,112 +47,82 @@ strong, b {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-lato);
 }
 body a, body a:hover {
   color: black;
   text-decoration: none;
 }
 
-h1, h2, .bg-hero-picinguaba h5, .bg-hero-catucaba h5 {
-  font-weight: 500;
-}
-
-h3, h4, h5, h6, .h6, p, span, .small {
-  font-weight: 200;
-}
-
 p {
-  font-size: 1em;
-}
-p.price {
-  font-size: 1.18em;
-}
-p.host {
-  font-size: 0.9em;
-  font-weight: 500;
+  font-size: 18px;
+  font-family: var(--font-lato);
 }
 p.subtitle {
-  font-size: 0.818em;
+  font-size: 16px;
 }
 p.small {
-  font-size: 0.818em;
+  font-size: 14px;
+}
+p.ex-small {
+  font-size: 12px;
 }
 
 h1 {
-  font-size: 2.18em;
+  font-family: var(--font-oswald);
+  font-size: 48px;
+  line-height: 50px;
 }
 h1.big {
-  font-size: 2.27em;
+  font-size: 50px;
 }
 h1.bigger {
-  font-size: 2.727em;
+  font-size: 60px;
 }
 
 h2 {
-  font-size: 1.818em;
+  font-family: var(--font-oswald);
+  font-size: 36px;
 }
 
 h3 {
-  font-size: 1.636em;
+  font-family: var(--font-oswald);
+  font-size: 28px;
 }
 
 h4 {
-  font-size: 1.454em;
+  font-family: var(--font-oswald);
+  font-size: 24px;
 }
 
 h5 {
-  font-size: 1.363em;
+  font-family: var(--font-oswald);
+  font-size: 20px;
 }
 
 h6 {
-  font-size: 1.09em;
-}
-h6.txt-timeline {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.h6 {
-  font-size: 1.09em;
+  font-family: var(--font-oswald);
+  font-size: 18px;
 }
 
 span {
-  font-size: 0.54em;
+  font-size: 12px;
 }
 span.big {
-  font-size: 0.72em;
+  font-size: 16px;
 }
 
 ul {
   padding: 0px;
+  list-style-type: none;
 }
 
-:root {
-  --dark: #000;
-  --white: #FFF;
-  --purple: #663399;
+.p-top {
+  padding-top: 216px;
 }
 
-.button {
-  padding: 6px 15px;
-  margin-top: 13px;
-  margin-right: 30px;
-  background-color: purple;
-}
-@media screen and (max-width: 768px) {
-  .button {
-    margin-top: 20px;
-    margin-right: 20px;
-  }
-}
-
-.social {
-  padding-top: 4px;
-}
-.social a {
-  display: inline-block;
+.bg-purple {
+  background-color: var(--purple);
 }
 
 .facebook span {
@@ -201,18 +180,55 @@ ul {
   margin-right: 5px;
 }
 
-.logo-menu {
-  margin-top: 24px;
-  margin-bottom: 24px;
+.button {
+  padding: 6px 15px;
+  margin-top: 13px;
+  margin-right: 30px;
+  background-color: purple;
+}
+@media screen and (max-width: 768px) {
+  .button {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
 }
 
-.list-menu ul {
-  margin-bottom: 7px;
+.social {
+  padding-top: 4px;
+}
+.social a {
+  display: inline-block;
+}
+
+.menu-principal {
+  text-align: center;
+}
+.menu-principal.scroll .logo-menu {
+  height: 0px;
+}
+.menu-principal.scroll .logo-menu img {
+  height: 0px;
+}
+
+.logo-menu {
+  height: 86px;
+  transition: height 1s;
+}
+.logo-menu img {
+  transition: height 0.5s;
+  height: 66px;
+}
+
+.list-menu {
+  height: 62px;
+  padding: 17px 15px;
 }
 .list-menu ul li {
   display: inline-block;
   margin-right: 24px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--font-oswald);
 }
 .list-menu ul li:last-of-type {
   margin-right: 0px;
@@ -238,16 +254,22 @@ ul {
 .list-tags ul li {
   display: inline-block;
   margin-right: 24px;
-  FONT-SIZE: 12px;
+  font-size: 14px;
 }
 .list-tags ul li:last-of-type {
   margin-right: 0px;
 }
 .list-tags a {
   text-transform: lowercase;
-  FONT-SIZE: 12px;
+  font-size: 14px;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 11;
+}
 header a {
   color: black;
 }
@@ -308,9 +330,9 @@ li.menu-item-has-children::after {
   color: #fff;
 }
 footer {
-  font-family: "Fakt Pro", sans-serif;
-  background-color: #231e32;
-  padding: 50px 0;
+  padding: 30px 0;
+  background-color: var(--purple);
+  color: #fff;
 }
 footer .menu li.current-menu-item a {
   font-weight: 200;
@@ -319,9 +341,17 @@ footer .menu li.current-menu-item a {
 footer .menu li a {
   font-weight: 200;
 }
-footer span {
-  font-weight: 200;
-  font-size: 0.85em;
+footer .logo {
+  height: 47px;
+  display: block;
+}
+footer .facebook span, footer .instagram span, footer .twitter span, footer .whatsapp span, footer .telegram span {
+  background-color: #fff;
+}
+footer .menu-footer li a {
+  color: #fff;
+  font-family: var(--font-oswald);
+  font-size: 14px;
 }
 
 .card-image {
@@ -379,15 +409,19 @@ footer span {
   height: 365px;
 }
 
+.home .carousel.hero-slide .flickity-page-dots {
+  bottom: 0px;
+  left: 206px;
+}
+.home .carousel.hero-slide .flickity-page-dots li.dot {
+  background: var(--red);
+}
 .home .carousel.hero-slide .carousel-cell {
   width: 100%;
   height: 356px;
 }
 .home .carousel.hero-slide button {
   display: none;
-}
-.home .hero-slide-cat {
-  font-size: 12px;
 }
 
 .col-reg {
@@ -415,6 +449,18 @@ footer span {
 
 .slide-video {
   width: 100%;
+}
+
+.flickity-page-dots li.dot {
+  border-radius: 0px;
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.name-categoria {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

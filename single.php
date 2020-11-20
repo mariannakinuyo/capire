@@ -8,7 +8,7 @@
     $tags = get_the_tags();
 ?>
 
-<div class="container">
+<div class="container p-top">
     <div class="row">
         <div class="col-12 col-lg-8 offset-lg-2">
 

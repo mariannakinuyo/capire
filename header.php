@@ -7,7 +7,11 @@
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;0,900;1,300&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;0,900;1,300&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"  rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
@@ -48,17 +52,36 @@
       </div>
     </div>
   </div>
-  <div class="text-center b-bottom">
-    <div class="logo-menu">
-      <a href="">
-        <img src="https://via.placeholder.com/206x66" alt="">
-      </a>
+
+  <div class="container-fluid">
+    <div class="row b-bottom">
+      <div class="container">
+        <div class="menu-principal">
+          <div class="logo-menu">
+            <a href="">
+              <img src="https://via.placeholder.com/206x66" alt="">
+            </a>
+          </div>
+          <div class="list-menu">
+            <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="list-menu">
-      <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
-    </div>
+
+
   </div>
-  <div class="list-tags b-bottom">
-    <?php wp_nav_menu( array( 'menu' => 'menu-tags', 'container' => FALSE, 'menu_class' => 'menu-menu-tags-container', 'menu_id' => false ) ); ?>
+
+  <div class="container-fluid">
+    <div class="row b-bottom">
+      <div class="container">
+        <div class="list-tags">
+          <?php wp_nav_menu( array( 'menu' => 'menu-tags', 'container' => FALSE, 'menu_class' => 'menu-menu-tags-container', 'menu_id' => false ) ); ?>
+        </div>
+      </div>
   </div>
+</div>
+
+
 </header>

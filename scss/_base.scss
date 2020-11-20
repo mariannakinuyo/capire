@@ -1,7 +1,7 @@
 
 html, body {
-  font-family: $font-primary;
-  color: $grey;
+  font-family: var(--font-lato);
+  color: $dark;
   font-size: 18px; //22px
   &.overflow-hidden {
     overflow-y: hidden;
@@ -21,79 +21,126 @@ body {
     color: black;
     text-decoration: none;
   }
-  font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, .bg-hero-picinguaba h5, .bg-hero-catucaba h5 {
-  font-weight: 500;
-}
-h3, h4, h5, h6, .h6, p, span, .small {
-  font-weight: 200;
+  font-family: var(--font-lato);
 }
 
 p {
-  font-size: 1em; //22px
-  &.price {
-    font-size: 1.18em; //26px
-  }
-  &.host {
-    font-size: 0.90em; //20px;
-    font-weight: 500;
-  }
+  font-size: 18px; 
+  font-family: var(--font-lato);
   &.subtitle {
-    font-size: 0.818em; //18px
+    font-size: 16px; 
   }
   &.small {
-    font-size:  0.818em; //18px
+    font-size:  14px; 
+  }
+  &.ex-small {
+    font-size:  12px; 
   }
 }
 
 h1 {
-  font-size: 2.18em; //48px
+  font-family: var(--font-oswald);
+  font-size: 48px;
+  line-height: 50px;
   &.big {
-    font-size: 2.27em; //50px
+    font-size: 50px; 
   }
   &.bigger {
-    font-size: 2.727em; //60px
+    font-size: 60px;
   }
 }
 h2 {
-  font-size: 1.818em; //40px
+  font-family: var(--font-oswald);
+  font-size: 36px;
 }
 h3 {
-  font-size: 1.636em; //36px
+  font-family: var(--font-oswald);
+  font-size: 28px;
 }
 h4 {
-  font-size: 1.454em; //32px
+  font-family: var(--font-oswald);
+  font-size: 24px;
 }
 h5 {
-  font-size: 1.363em; //30px
+  font-family: var(--font-oswald);
+  font-size: 20px;
 }
 h6 {
-  font-size: 1.09em; //24px
-  &.txt-timeline {
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-}
-.h6 {
-  font-size: 1.09em; //24px
+  font-family: var(--font-oswald);
+  font-size: 18px;
 }
 
 span {
-  font-size: 0.54em; //12px
+  font-size: 12px;
   &.big {
-    font-size: 0.72em; //16px
+    font-size: 16px;
   }
 }
 
 ul {
   padding: 0px;
+  list-style-type: none;
 }
 
-:root {
-  --dark: #000;
-  --white: #FFF;
-  --purple: #663399;
+.p-top {
+  padding-top: 216px;
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.facebook span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.twitter span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.instagram span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.whatsapp span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.telegram span {
+  width: 16px;
+  height: 16px;
+  background-color: #713080;
+  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
+  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
 }

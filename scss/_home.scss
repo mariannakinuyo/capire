@@ -14,6 +14,13 @@
 
 .home {
     .carousel.hero-slide {
+        .flickity-page-dots {
+            bottom: 0px;
+            left: 206px;
+            li.dot {
+                background: var(--red);
+            }
+        }
         .carousel-cell {
             width: 100%;
             height: 356px;
@@ -21,10 +28,6 @@
         button {
             display: none;
         }
-    }
-
-    .hero-slide-cat {
-        font-size: 12px;
     }
 }
 
@@ -57,4 +60,18 @@
 
 .slide-video {
     width: 100%;
+}
+
+.flickity-page-dots {
+    li.dot {
+        border-radius: 0px;
+        width: 11px;
+        height: 11px;
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+}
+
+.name-categoria {
+    font-size: 14px;
 }
