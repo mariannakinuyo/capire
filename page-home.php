@@ -6,14 +6,14 @@ $pageID = get_the_ID();
 
 
 <section class="container-fluid p-top">
-  <div class="row bg-grey">
-    <div class="col-md-6 offset-md-3">
-        <h5><?php echo get_field('texto_do_topo', $pageID) ?></h5>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 my-5">
+        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
     </div>
   </div>
 </section>
 
-<section class="container home mt-md-5">
+<section class="container home">
   <div class="row">
     <div class="col-md-10 offset-md-1">
 
@@ -68,9 +68,9 @@ $pageID = get_the_ID();
 <?php componente_regioes() ?>
 
 
-<section class="container">
+<section class="container mt-5">
   <div class="row">
-    <div class="offset-md-1 col-md-10">
+    <div class="offset-md-1 col-md-10 pt-5">
       <div class="row">
 
         <?php
@@ -88,10 +88,14 @@ $pageID = get_the_ID();
 
           <div class="col-md-4">
             <div class="box-cats-home">
-              <span><?php echo $categoria ?></span>
-              <span><?php echo get_the_date('d/m/Y') ?></span>
-              <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-              <h4><?php echo $title ?></</h4>
+              
+              <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+              <div class="name-categoria">
+                <span><?php echo $categoria ?></span>
+                <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+              </div>
+              
+              <h4><?php echo $title ?></h4>
               <p class="subtitle"><?php echo $linha_fina ?></p>
             </div>      
           </div>
@@ -102,8 +106,10 @@ $pageID = get_the_ID();
           }
         ?>
 
-        <div class="col-md-4">
-          <h5>LEIA MAIS</h5>
+        <div class="col-md-4 read-more">
+          
+          <h6>LEIA MAIS</h6>
+          <div class="line-gradient more"></div>
         
           <?php 
           $posts_last = new WP_Query( array(
@@ -114,11 +120,11 @@ $pageID = get_the_ID();
           
           foreach ( $posts_last->posts as $post ) {
             $title = get_the_title( $post->ID );
+            $link = get_permalink( $post->ID );
           ?>
 
-          <div class="more-home">
-            <h5><?php echo $title ?></h5>
-          </div>
+            <a href="<?php echo $link ?>"><h4><?php echo $title ?></h4></a>
+            <div class="line-gradient more-home"></div>
 
           <?php } ?>
 
@@ -139,10 +145,12 @@ $pageID = get_the_ID();
 
           <div class="col-md-4">
             <div class="box-cats-home">
-              <span><?php echo $categoria ?></span>
-              <span><?php echo get_the_date('d/m/Y') ?></span>
-              <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-              <h5><?php echo $title ?></</h5>
+              <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+              <div class="name-categoria">
+                <span><?php echo $categoria ?></span>
+                <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+              </div>
+              <h4><?php echo $title ?></h4>
               <p class="subtitle"><?php echo $linha_fina ?></p>
             </div>      
           </div>
@@ -163,11 +171,15 @@ $pageID = get_the_ID();
 
 <section class="container">
   <div class="row">
-    <div class="offset-md-2 col-md-8">
-      
-      <h3>Assista</h3>
 
-      <div class="carousel" data-flickity='{ "freeScroll": true }'>
+    <div class="col-12 col-lg-10 offset-1">
+      <div class="line-gradient"></div>
+    </div>
+
+    <div class="offset-md-2 col-md-8">
+      <h3 class="title-watch">Assista</h3>
+
+      <div class="carousel slider-videos" data-flickity='{ "freeScroll": true }'>
 
         <?php 
         $posts_midias = new WP_Query( array(
@@ -188,24 +200,31 @@ $pageID = get_the_ID();
         ?>
 
           <div class="carousel-cell slide-video">
-            <div class="bg-img slide-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"></div>
+            <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )">
+            </div>
             <h3><?php echo get_the_title( $post->ID ); ?></h3>
+            <button class="player-video"></button>
+
           </div>
         
         <?php } ?>
 
       </div>
-
-
     </div>
+
+    <div class="col-12 col-lg-10 offset-1">
+      <div class="line-gradient"></div>
+    </div>
+
   </div>
 </section>
 
 <?php componente_newsletter() ?>
 
-<section class="container-fluid bg-grey mt-5">
+<section class="container-fluid mt-5 donation">
   <div class="row">
-    <div class="offset-lg-3 col-lg-6">
+    <div class="line-gradient"></div>
+    <div class="offset-lg-3 col-lg-6 text-center p-donation">
         <h2><?php echo get_field('texto_doacao', $pageID) ?></h2>
         <button>paypall</button>
     </div>

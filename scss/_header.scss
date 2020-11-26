@@ -110,7 +110,7 @@ header {
 .b-bottom::after {
   content: "";
   display: block;
-  background: linear-gradient(to left , #663399, #CC3333);
+  background: var(--linear-gradient);
   height: 1px;
   width: 100%;
 }

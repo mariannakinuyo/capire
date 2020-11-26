@@ -1,5 +1,5 @@
 .bg-grey {
-    background-color: #DEDEDE
+    background-color: #f4f4f4;
 }
 
 .bg-img {
@@ -15,8 +15,13 @@
 .home {
     .carousel.hero-slide {
         .flickity-page-dots {
+            width: auto;
             bottom: 0px;
-            left: 206px;
+            left: 533px;
+            text-align: left;
+            @media screen and (min-width: 1200px) {
+                left: 636px;
+            }
             li.dot {
                 background: var(--red);
             }
@@ -31,35 +36,18 @@
     }
 }
 
-.col-reg {
-    width: 20%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.box-reg {
-    .img-reg-home {
-        height: 129px;
-        width: 100%;
-    }
-    .cat-reg {
-        background-color: grey;
-    }
-}
-
 .box-cats-home {
+    margin-bottom: 75px;
+
     .img-cats-home {
         height: 195px;
+        margin-bottom: 11px;
     }
-}
 
-.slide-video-home {
-    height: 474px;
-    width: 100%;
-}
-
-.slide-video {
-    width: 100%;
+    h4 {
+        margin-top: 15px;
+        margin-bottom: 11px;
+    }
 }
 
 .flickity-page-dots {
@@ -74,4 +62,186 @@
 
 .name-categoria {
     font-size: 14px;
+    font-weight: 500;
+
+    span {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    span.date {
+        font-size: 12px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 49px;
+        height: 7px;
+        background-color: var(--red);
+        margin-top: 11px;
+    }
+
+    &.small {
+        &::after {
+            content: "";
+            display: block;
+            width: 47px;
+            height: 3px;
+            background-color: var(--red);
+            margin-top: 7px;
+            margin-bottom: 11px;
+        }
+    }
+}
+
+.highlight {
+    &::before {
+        content: "";
+        display: block;
+        -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
+        mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
+        background-color: var(--red);
+        width: 40px;
+        height: 40px;
+        margin-left: -30px;
+        float: left;
+        margin-top: -17px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
+        mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
+        background-color: var(--red);
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin-right: -30px;
+        margin-top: 12px;
+    }
+}
+
+.line-gradient {
+    &.more {
+        width: 220px;
+    }
+
+    &.more-home {
+        height: 1px;
+        width: 154px;
+        &:last-of-type {
+            display: none;
+        }
+    }
+}
+
+.read-more {
+    h4 {
+        margin: 17px 0px;
+    }
+}
+
+
+.slide-video {
+    width: 100%;
+
+    h3 {
+        position: absolute;
+        bottom: 15px;
+        left: 22px;
+        color: white;
+    }
+}
+
+.slider-videos {
+    margin-top: 58px;
+    margin-bottom: 60px;
+    position: relative;
+
+    .flickity-page-dots {
+        top: -47px;
+        bottom: unset;
+        text-align: left;
+        color: var(--purple);
+    }
+
+    .flickity-page-dots .dot {
+        background: var(--purple);
+    }
+
+    .flickity-button {
+        background: var(--purple);
+        color: var(--white);
+        z-index: 5;
+        &:hover {
+            background: var(--purple);
+            opacity: 50%;
+        }
+    }
+
+    .flickity-prev-next-button {
+        top: -75px;
+        width: 31px;
+        height: 31px;
+        border-radius: 2px;
+        right: 0px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0px;
+    }
+
+    .flickity-prev-next-button.previous {
+        right: 40px;
+        left: auto;
+    }
+
+    .flickity-button:disabled {
+        opacity: 0.5;
+    }
+}
+
+.title-watch {
+    margin-top: 47px;
+}
+
+.player-video {
+    background-image: url(../images/player.png);
+    opacity: 0.7;
+    position: absolute;
+    top: calc(50% - 42px);
+    left: calc(50% - 42px);
+    width: 83px;
+    height: 83px;
+    border: 0px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img-video-home {
+    height: 474px;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+
+.donation {
+    h2 {
+        text-align: center;
+    }
+
+    button {
+        border: 0px;
+        border-radius: 3px;
+        padding: 4px 12px;
+        background-color: var(--purple);
+        color: white;
+        margin-top: 37px;
+        cursor: pointer;
+    }
+}
+
+.p-donation {
+    padding: 77px 0px;
 }

@@ -19,33 +19,37 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="social-lang b-bottom">
-    <div class="container">
+  <div class="container-fluid">
+    <div class="social-lang b-bottom">
       <div class="row">
-        <div class="col-md-8">
-          <div class="social">
-            <a href="" class="facebook">
-              <span></span>
-            </a>
-            <a href="" class="instagram">
-              <span></span>
-            </a>
-            <a href="" class="twitter">
-              <span></span>
-            </a>
-            <a href="" class="whatsapp">
-              <span></span>
-            </a>
-            <a href="" class="telegram">
-              <span></span>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="float-right">
-            <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
-            <div class="button-doe">
-              <a href="">APOIE</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="social">
+                <a href="" class="facebook">
+                  <span></span>
+                </a>
+                <a href="" class="instagram">
+                  <span></span>
+                </a>
+                <a href="" class="twitter">
+                  <span></span>
+                </a>
+                <a href="" class="whatsapp">
+                  <span></span>
+                </a>
+                <a href="" class="telegram">
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="float-right">
+                <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
+                <div class="button-doe">
+                  <a href="">APOIE</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -67,10 +71,7 @@
           </div>
         </div>
       </div>
-
     </div>
-
-
   </div>
 
   <div class="container-fluid">
@@ -81,7 +82,5 @@
         </div>
       </div>
   </div>
-</div>
-
 
 </header>

@@ -1,0 +1,23 @@
+
+.col-reg {
+  width: 20%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.box-reg {
+  .img-reg-home {
+      height: 129px;
+      width: 100%;
+      margin-bottom: 7px;
+  }
+  .cat-reg {
+      float: right;
+      margin-top: 7px;
+      margin-right: -7px;
+      background-color: var(--red);
+      color: var(--white);
+      padding: 2px 5px;
+      text-transform: uppercase;
+  }
+}

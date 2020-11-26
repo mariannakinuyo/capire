@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3>Navegue por regiões</h3>
+        <h2>Navegue por regiões</h2>
       </div>
 
       <?php 
@@ -27,16 +27,20 @@
         $regs = get_the_terms( $post->ID, 'regioes' )[0];
         $categoria = get_the_terms( $post->ID, 'category' )[0];
         $link = get_permalink( $post->ID );
+        $thumb = get_the_post_thumbnail_url( $post->ID, 'full');
       ?>
         
         <div class="col-reg">
             <a href="<?php echo $link ?>">
                 <div class="box-reg">
-                    <div class="bg-img img-reg-home" style="background-image: url(https://via.placeholder.com/560x365)">
+                    <div class="bg-img img-reg-home" style="background-image: url(<?php echo $thumb ?>)">
                         <span class="cat-reg"><?php echo $regs->name ?></span>
                     </div>
-                    <span><?php echo $categoria->name ?></span>
-                    <span><?php echo get_the_date('d/m/Y') ?></span>
+                    <div class="name-categoria small">
+                      <span><?php echo $categoria->name ?></span>
+                      <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
+                    </div>
+                    
                     <h5><?php echo get_the_title( $post->ID ); ?></h5>
                 </div>
             </a>

@@ -13,7 +13,7 @@ html, body {
 // }
 
 strong, b {
-  font-weight: 500;
+  font-weight: 600 !important;
 }
 
 body {
@@ -28,7 +28,8 @@ p {
   font-size: 18px; 
   font-family: var(--font-lato);
   &.subtitle {
-    font-size: 16px; 
+    font-size: 16px;
+    line-height: 22px;
   }
   &.small {
     font-size:  14px; 
@@ -51,7 +52,7 @@ h1 {
 }
 h2 {
   font-family: var(--font-oswald);
-  font-size: 36px;
+  font-size: 34px;
 }
 h3 {
   font-family: var(--font-oswald);
@@ -59,7 +60,7 @@ h3 {
 }
 h4 {
   font-family: var(--font-oswald);
-  font-size: 24px;
+  font-size: 22px;
 }
 h5 {
   font-family: var(--font-oswald);
@@ -68,6 +69,12 @@ h5 {
 h6 {
   font-family: var(--font-oswald);
   font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.lato {
+    font-family: var(--font-lato);
+  }
 }
 
 span {
@@ -94,8 +101,8 @@ ul {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/facebook.svg) no-repeat center;
+  -webkit-mask: url(../images/facebook.svg) no-repeat center;
+  mask: url(../images/facebook.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
@@ -105,8 +112,8 @@ ul {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/twitter.svg) no-repeat center;
+  -webkit-mask: url(../images/twitter.svg) no-repeat center;
+  mask: url(../images/twitter.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
@@ -116,8 +123,8 @@ ul {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/instagram.svg) no-repeat center;
+  -webkit-mask: url(../images/instagram.svg) no-repeat center;
+  mask: url(../images/instagram.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
@@ -127,8 +134,8 @@ ul {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/whatsapp.svg) no-repeat center;
+  -webkit-mask: url(../images/whatsapp.svg) no-repeat center;
+  mask: url(../images/whatsapp.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
@@ -138,9 +145,15 @@ ul {
   width: 16px;
   height: 16px;
   background-color: #713080;
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/telegram.svg) no-repeat center;
+  -webkit-mask: url(../images/telegram.svg) no-repeat center;
+  mask: url(../images/telegram.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
+}
+
+.line-gradient {
+  background: var(--linear-gradient);
+  width: 100%;
+  height: 2px;
 }
