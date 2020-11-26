@@ -5,7 +5,7 @@
  */
 include dirname(__FILE__) . '/template_partes/newsletter.php';
 include dirname(__FILE__) . '/template_partes/regioes.php';
-
+include dirname(__FILE__) . '/template_partes/compartilhar.php';
 
 
 // Registra as sidebars

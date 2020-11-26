@@ -18,7 +18,7 @@ strong, b {
 
 body {
   a, a:hover {
-    color: black;
+    color: unset;
     text-decoration: none;
   }
   font-family: var(--font-lato);
@@ -156,4 +156,12 @@ ul {
   background: var(--linear-gradient);
   width: 100%;
   height: 2px;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.red {
+  color: var(--red);
 }
