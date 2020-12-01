@@ -1,21 +1,20 @@
 <?php get_header(); 
 
 $pageID = get_the_ID();
-
 ?>
 
 
-<section class="container-fluid p-top">
+<section class="container p-top">
   <div class="row">
-    <div class="col-md-6 offset-md-3 my-5">
+    <div class="col-lg-6 offset-lg-3 my-5">
         <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
     </div>
   </div>
 </section>
 
-<section class="container home">
+<section class="container hero">
   <div class="row">
-    <div class="col-md-10 offset-md-1">
+    <div class="col-lg-10 offset-lg-1">
 
       <?php
         $rows = get_field('carousel_principal', $pageID);
@@ -35,10 +34,10 @@ $pageID = get_the_ID();
           <div class="carousel-cell">
             <a href="<?php echo $link ?>">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                   <div class="bg-img img-hero-slide" style="background-image: url(<?php echo $thumb ?>)"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
               
                   <p class="name-categoria">
                     <?php echo $categoria ?>
@@ -68,9 +67,9 @@ $pageID = get_the_ID();
 <?php componente_regioes() ?>
 
 
-<section class="container mt-5">
+<section class="container">
   <div class="row">
-    <div class="offset-md-1 col-md-10 pt-5">
+    <div class="offset-lg-1 col-lg-10">
       <div class="row">
 
         <?php
@@ -86,18 +85,20 @@ $pageID = get_the_ID();
               $linha_fina = get_field('linha_fina', $post_formato_1->ID);
           ?>
 
-          <div class="col-md-4">
-            <div class="box-cats-home">
-              
-              <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
-              <div class="name-categoria">
-                <span><?php echo $categoria ?></span>
-                <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+          <div class="col-lg-4">
+            <a href="<?php echo $link ?>">
+              <div class="box-cats-home">
+                
+                <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+                <div class="name-categoria">
+                  <span><?php echo $categoria ?></span>
+                  <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+                </div>
+                
+                <h4><?php echo $title ?></h4>
+                <p class="subtitle"><?php echo $linha_fina ?></p>
               </div>
-              
-              <h4><?php echo $title ?></h4>
-              <p class="subtitle"><?php echo $linha_fina ?></p>
-            </div>      
+            </a> 
           </div>
 
           <?php
@@ -106,7 +107,7 @@ $pageID = get_the_ID();
           }
         ?>
 
-        <div class="col-md-4 read-more">
+        <div class="col-lg-4 read-more">
           
           <h6>LEIA MAIS</h6>
           <div class="line-gradient more"></div>
@@ -143,16 +144,18 @@ $pageID = get_the_ID();
               $linha_fina = get_field('linha_fina', $post_formato_2->ID);
           ?>
 
-          <div class="col-md-4">
-            <div class="box-cats-home">
-              <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
-              <div class="name-categoria">
-                <span><?php echo $categoria ?></span>
-                <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+          <div class="col-lg-4">
+            <a href="<?php echo $link ?>">
+              <div class="box-cats-home">
+                <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+                <div class="name-categoria">
+                  <span><?php echo $categoria ?></span>
+                  <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+                </div>
+                <h4><?php echo $title ?></h4>
+                <p class="subtitle"><?php echo $linha_fina ?></p>
               </div>
-              <h4><?php echo $title ?></h4>
-              <p class="subtitle"><?php echo $linha_fina ?></p>
-            </div>      
+            </a>
           </div>
 
           <?php
@@ -176,7 +179,7 @@ $pageID = get_the_ID();
       <div class="line-gradient"></div>
     </div>
 
-    <div class="offset-md-2 col-md-8">
+    <div class="offset-lg-2 col-lg-8">
       <h3 class="title-watch">Assista</h3>
 
       <div class="carousel slider-videos" data-flickity='{ "freeScroll": true }'>
@@ -197,13 +200,16 @@ $pageID = get_the_ID();
         
         foreach ( $posts_midias->posts as $post ) {
           $thumbvideo = get_the_post_thumbnail_url( $post->ID, 'full');
+          $link = get_permalink( $post_formato_2->ID );
         ?>
 
           <div class="carousel-cell slide-video">
             <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )">
             </div>
             <h3><?php echo get_the_title( $post->ID ); ?></h3>
-            <button class="player-video"></button>
+            <a href="<?php echo $link ?>">
+              <button class="player-video"></button>
+            </a>
 
           </div>
         
@@ -221,14 +227,6 @@ $pageID = get_the_ID();
 
 <?php componente_newsletter() ?>
 
-<section class="container-fluid mt-5 donation">
-  <div class="row">
-    <div class="line-gradient"></div>
-    <div class="offset-lg-3 col-lg-6 text-center p-donation">
-        <h2><?php echo get_field('texto_doacao', $pageID) ?></h2>
-        <button>paypall</button>
-    </div>
-  </div>
-</section>
+<?php componente_doacao() ?>
 
 <?php get_footer(); ?>

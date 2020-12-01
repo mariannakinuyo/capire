@@ -7,7 +7,6 @@
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;0,900;1,300&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"  rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,9 +19,9 @@
 
 <header>
   <div class="container-fluid">
-    <div class="social-lang b-bottom">
-      <div class="row">
-        <div class="container">
+    <!-- <div class="social-lang"> -->
+      <div class="row b-bottom">
+        <div class="container social-lang">
           <div class="row">
             <div class="col-md-8">
               <div class="social">
@@ -54,7 +53,7 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 
   <div class="container-fluid">
@@ -62,12 +61,18 @@
       <div class="container">
         <div class="menu-principal">
           <div class="logo-menu">
-            <a href="">
-              <img src="https://via.placeholder.com/206x66" alt="">
+            <a href="<?php echo home_url() ?>">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo-capire.png" alt="">
             </a>
           </div>
           <div class="list-menu">
-            <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
+            <div>
+              <a href="<?php echo home_url() ?>">
+                <img class="logo-redu-menu" src="<?php bloginfo('template_url'); ?>/images/logo-reduzido-capire.png" alt="">
+              </a>
+              <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
+            </div>
+            
           </div>
         </div>
       </div>

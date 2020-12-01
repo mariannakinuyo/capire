@@ -12,6 +12,10 @@ html, body {
 //   margin: 0px !important;
 // }
 
+a {
+  cursor: pointer;
+}
+
 strong, b {
   font-weight: 600 !important;
 }
@@ -43,6 +47,7 @@ h1 {
   font-family: var(--font-oswald);
   font-size: 48px;
   line-height: 50px;
+  margin-bottom: 15px;
   &.big {
     font-size: 50px; 
   }
@@ -56,7 +61,7 @@ h2 {
 }
 h3 {
   font-family: var(--font-oswald);
-  font-size: 28px;
+  font-size: 26px;
 }
 h4 {
   font-family: var(--font-oswald);
@@ -64,7 +69,7 @@ h4 {
 }
 h5 {
   font-family: var(--font-oswald);
-  font-size: 20px;
+  font-size: 24px;
 }
 h6 {
   font-family: var(--font-oswald);

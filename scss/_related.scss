@@ -1,0 +1,18 @@
+.relacionados {
+    h3 {
+        margin-bottom: 82px;
+    }
+
+    p.linha-fina {
+        padding-left: 27px;
+    }
+
+    p.name-categoria::after {
+        display: none;
+    }
+}
+
+.card-relacionados {
+    border-left: 11px solid var(--red);
+    padding-left: 20px;
+}

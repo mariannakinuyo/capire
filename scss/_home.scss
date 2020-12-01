@@ -12,7 +12,10 @@
     height: 365px;
 }
 
-.home {
+.hero {
+    margin-top: 50px;
+    margin-bottom: 90px;
+
     .carousel.hero-slide {
         .flickity-page-dots {
             width: auto;
@@ -120,6 +123,10 @@
         margin-right: -30px;
         margin-top: 12px;
     }
+}
+
+.highlight.lato {
+    font-size: 26px;
 }
 
 .line-gradient {

@@ -6,7 +6,9 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div>
-                        <img class="logo" src="https://via.placeholder.com/206x66" alt="logo">
+                        <a href="<?php echo home_url() ?>">
+                            <img class="logo" src="<?php bloginfo('template_url'); ?>/images/logo-branco-capire.png" alt="">
+                        </a>
                         <img src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
                         <p class="ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
 
@@ -40,9 +42,6 @@
         </div>
     </div>
 </footer>
-
-
-
 
 
 

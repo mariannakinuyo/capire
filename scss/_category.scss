@@ -1,0 +1,25 @@
+
+.tags {
+    .tag-name {
+        background-color: var(--red);
+        color: white;
+        font-size: 18px;
+        width: fit-content;
+        padding: 3px 7px;
+        text-transform: lowercase;
+        font-family: var(--font-lato);
+        margin-bottom: 38px;
+        margin-top: 40px;
+    }
+}
+
+.categories {
+    .name-categoria {
+        font-size: 26px;
+        margin-top: 40px;
+    }
+
+    .description-cat {
+        margin-bottom: 38px;
+    }
+}

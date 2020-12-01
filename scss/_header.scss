@@ -33,7 +33,13 @@
           height: 0px;
         }
     }
-
+    .logo-redu-menu {
+      width: 28px;
+      margin-right: 24px;
+      margin-top: -13px;
+      display: inline-block;
+      transition: width 0.5s;
+    }
   } 
 }
 
@@ -41,9 +47,15 @@
   height: 86px;
   transition: height 1s;
   img {
+    margin-top: 21px;
     transition: height 0.5s;
     height: 66px;
   }
+}
+
+.logo-redu-menu {
+  width: 0px;
+  transition: width 0.5s;
 }
 
 .list-menu {
@@ -58,10 +70,12 @@
     font-size: 20px;
     font-weight: 500;
     font-family: var(--font-oswald);
+
     &:last-of-type {
       margin-right: 0px;
     }
   }
+
   ul.sub-menu {
     display: none;
     position: absolute;
@@ -69,8 +83,23 @@
     text-align: left;
     background-color: white;
     z-index: 10;
+    border-bottom: 1px solid var(--red);
+    border-left: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+
     li.menu-item {
       display: block;
+      margin-right: 0px;
+      border-bottom: 1px solid var(--red);
+      padding: 2px 7px;
+
+      &:last-of-type {
+        border-bottom: 0px;
+      }
+
+      a {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -159,8 +188,16 @@ li.menu-item-has-children::after {
   margin-left: 10px;
   a {
     color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
   }
   @media screen and (max-width: 768px) {
     
   }
+}
+
+ul.menu-menu-primario-container {
+  display: inline-block;
 }

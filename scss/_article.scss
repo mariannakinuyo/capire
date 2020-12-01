@@ -124,3 +124,28 @@ article {
     }
   }
 }
+
+.social-vert .social {
+  a {
+    display: block;
+    margin-bottom: 9px;
+  }
+}
+
+.social-right {
+  float: right;
+}
+
+.wrap-article {
+  margin-top: 36px;
+  margin-bottom: 110px;
+}
+
+.infos-article {
+  position: relative;
+  .social-right {
+    position: absolute;
+    top: -6px;
+    right: 0px;
+  }
+}

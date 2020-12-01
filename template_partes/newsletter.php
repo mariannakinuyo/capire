@@ -1,7 +1,7 @@
 <?php function componente_newsletter() { ?>
 
-<section class="container mt-5">
-  <div class="newsletter-home">
+<section class="container">
+  <div class="wrap-newsletter">
     <div class="row">
       <div class="offset-md-2 col-md-4 col-12">
         <div class="element-left">
