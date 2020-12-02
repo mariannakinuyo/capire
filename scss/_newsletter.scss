@@ -21,9 +21,8 @@
   }
 
   .element-left {
-
     margin-top: 77px;
-
+    
     &::after {
       content: "";
       display: block;
@@ -32,6 +31,11 @@
       height: 175px;
       margin-top: -113px;
       margin-left: -81px;
+
+      @media screen and (max-width: 1199px) {
+        display: none;
+        background-image: url(../images/element-left-sm.png);
+      }
     }
   }
 
@@ -46,6 +50,11 @@
       float: right;
       margin-bottom: -92px;
       margin-right: -33px;
+
+      @media screen and (max-width: 1199px) {
+        display: none;
+        background-image: url(../images/element-right-sm.png);
+      }
     }
   }
 }

@@ -2,6 +2,7 @@
 html, body {
   font-family: var(--font-lato);
   color: $dark;
+  overflow-x: hidden;
   font-size: 18px; //22px
   &.overflow-hidden {
     overflow-y: hidden;
@@ -48,6 +49,10 @@ h1 {
   font-size: 48px;
   line-height: 50px;
   margin-bottom: 15px;
+  @media screen and (max-width: 1199px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
   &.big {
     font-size: 50px; 
   }
@@ -62,6 +67,9 @@ h2 {
 h3 {
   font-family: var(--font-oswald);
   font-size: 26px;
+  @media screen and (max-width: 1199px) {
+    font-size: 20px;
+  }
 }
 h4 {
   font-family: var(--font-oswald);
@@ -70,6 +78,9 @@ h4 {
 h5 {
   font-family: var(--font-oswald);
   font-size: 24px;
+  @media screen and (max-width: 1199px) {
+    font-size: 18px;
+  }
 }
 h6 {
   font-family: var(--font-oswald);
@@ -96,6 +107,10 @@ ul {
 
 .p-top {
   padding-top: 216px;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 63px;
+  }
 }
 
 .bg-purple {
@@ -105,7 +120,7 @@ ul {
 .facebook span {
   width: 16px;
   height: 16px;
-  background-color: #713080;
+  background-color: var(--purple);
   -webkit-mask: url(../images/facebook.svg) no-repeat center;
   mask: url(../images/facebook.svg) no-repeat center;
   margin: auto;
@@ -116,7 +131,7 @@ ul {
 .twitter span {
   width: 16px;
   height: 16px;
-  background-color: #713080;
+  background-color: var(--purple);
   -webkit-mask: url(../images/twitter.svg) no-repeat center;
   mask: url(../images/twitter.svg) no-repeat center;
   margin: auto;
@@ -127,7 +142,7 @@ ul {
 .instagram span {
   width: 16px;
   height: 16px;
-  background-color: #713080;
+  background-color: var(--purple);
   -webkit-mask: url(../images/instagram.svg) no-repeat center;
   mask: url(../images/instagram.svg) no-repeat center;
   margin: auto;
@@ -138,7 +153,7 @@ ul {
 .whatsapp span {
   width: 16px;
   height: 16px;
-  background-color: #713080;
+  background-color: var(--purple);
   -webkit-mask: url(../images/whatsapp.svg) no-repeat center;
   mask: url(../images/whatsapp.svg) no-repeat center;
   margin: auto;
@@ -149,7 +164,7 @@ ul {
 .telegram span {
   width: 16px;
   height: 16px;
-  background-color: #713080;
+  background-color: var(--purple);
   -webkit-mask: url(../images/telegram.svg) no-repeat center;
   mask: url(../images/telegram.svg) no-repeat center;
   margin: auto;

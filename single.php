@@ -44,7 +44,7 @@
     <article>
         <div class="row">
 
-            <div class="col-12 col-lg-6 offset-3">
+            <div class="col-12 col-lg-6 offset-lg-3">
                 <div class="cabeca">
                     <h2><?php the_title(); ?></h2>
                     <h5><?php echo $linha_fina ?></h5>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="row wrap-article">
-            <div class="col-12 col-lg-1 offset-2 social-vert">
+            <div class="col-12 col-lg-1 offset-lg-2 social-vert">
                 <?php componente_compartilhar() ?>
             </div>
 

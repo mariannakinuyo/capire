@@ -129,6 +129,10 @@ article {
   a {
     display: block;
     margin-bottom: 9px;
+
+    @media screen and (max-width: 1199px) {
+      display: inline-block;
+    }
   }
 }
 
@@ -147,5 +151,12 @@ article {
     position: absolute;
     top: -6px;
     right: 0px;
+
+    @media screen and (max-width: 1199px) {
+      left: 0px;
+      margin-top: 10px;
+      top: auto;
+      right: auto;
+    }
   }
 }

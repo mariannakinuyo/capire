@@ -18,7 +18,7 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container-fluid">
+  <div class="container-fluid d-none d-lg-block">
     <!-- <div class="social-lang"> -->
       <div class="row b-bottom">
         <div class="container social-lang">
@@ -56,7 +56,7 @@
     <!-- </div> -->
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid d-none d-lg-block">
     <div class="row b-bottom">
       <div class="container">
         <div class="menu-principal">
@@ -79,13 +79,36 @@
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid d-none d-lg-block">
     <div class="row b-bottom">
       <div class="container">
         <div class="list-tags">
           <?php wp_nav_menu( array( 'menu' => 'menu-tags', 'container' => FALSE, 'menu_class' => 'menu-menu-tags-container', 'menu_id' => false ) ); ?>
         </div>
       </div>
+    </div>
   </div>
+
+
+  <nav role='navigation' class="mobile-menu d-lg-none d-block">
+    <div class="logo-menu">
+      <a href="<?php echo home_url() ?>">
+        <img src="<?php bloginfo('template_url'); ?>/images/logo-capire.png" alt="">
+      </a>
+    </div>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu-mobile">
+        <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
+      </ul>
+    </div>
+  </nav>
+  <div class="line-gradient d-lg-none d-block"></div>
+
+
 
 </header>
