@@ -134,8 +134,8 @@
     &::before {
         content: "";
         display: block;
-        -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
-        mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
+        -webkit-mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
+        mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-left.svg) no-repeat center;
         background-color: var(--red);
         width: 40px;
         height: 40px;
@@ -144,15 +144,15 @@
         margin-top: -17px;
         @media screen and (max-width: 1199px) {
             margin-left: 0px;
-            -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left-sm.svg) no-repeat center;
-            mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-left-sm.svg) no-repeat center;
+            -webkit-mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-left-sm.svg) no-repeat center;
+            mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-left-sm.svg) no-repeat center;
         }
     }
     &::after {
         content: "";
         display: block;
-        -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
-        mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
+        -webkit-mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
+        mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-right.svg) no-repeat center;
         background-color: var(--red);
         width: 40px;
         height: 40px;
@@ -160,8 +160,8 @@
         margin-right: -30px;
         margin-top: 12px;
         @media screen and (max-width: 1199px) {
-            -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right-sm.svg) no-repeat center;
-            mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/highlight-right-sm.svg) no-repeat center;
+            -webkit-mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-right-sm.svg) no-repeat center;
+            mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/highlight-right-sm.svg) no-repeat center;
             margin-right: 0px;
         }
     }
@@ -268,12 +268,31 @@
     border: 0px;
     border-radius: 50%;
     cursor: pointer;
+
+    @media screen and (max-width: 1199px) {
+        background-image: url(../images/player-sm.png);
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        width: 61px;
+        height: 61px;
+    }
+
 }
 
+// .img-video-home {
+//     height: 474px;
+//     width: 100%;
+//     filter: grayscale(100%);
+
+//     @media screen and (max-width: 1199px) {
+//         width: 70%;
+//         height: 250px;
+//     }
+// }
+
 .img-video-home {
-    height: 474px;
     width: 100%;
-    filter: grayscale(100%);
+    height: auto;
 }
 
 

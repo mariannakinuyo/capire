@@ -1,12 +1,12 @@
 
-<?php function componente_doacao() { 
+<?php /* function componente_doacao() { 
 
 $pageFRONT = get_option( 'page_on_front' );
   
 ?>
 
 
-<section class="container-fluid mt-5 donation">
+<section id="donation" class="container-fluid mt-5 donation">
   <div class="row">
     <div class="line-gradient"></div>
     <div class="offset-lg-3 col-lg-6 text-center p-donation">
@@ -18,4 +18,4 @@ $pageFRONT = get_option( 'page_on_front' );
 
 
 <?php
-}
+} */

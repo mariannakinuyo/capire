@@ -1,43 +1,63 @@
-<?php get_header(); ?>
+<?php get_header(); 
 
-<section class="container-fluid">
-  <div class="row bg-grey">
-    <div class="col-md-6 offset-md-3">
-      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+$pageID = get_the_ID();
+?>
+
+
+<section class="container p-top">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3 my-5">
+        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
     </div>
   </div>
 </section>
 
-<section class="container home mt-md-5">
-  <div class="row">
-    <div class="col-md-10 offset-md-1">
+<section class="container hero">
+  <div class="row bg-red-mobile">
+    <div class="col-lg-10 offset-lg-1 col-12">
 
       <?php
-        $rows = get_field('carousel_principal', 43);
+        $rows = get_field('carousel_principal', $pageID);
         if( $rows ) {
       ?>
-        <div class="carousel hero-slide" data-flickity='{ "freeScroll": true }'>
+        <div class="carousel hero-slide" data-flickity='{ "autoPlay": true }'>
+        <!-- data-flickity='{ "autoPlay": true }' -->
         <?php
           foreach( $rows as $row ) {
             $post_principal = $row['post_carousel_principal'];
             $title = get_the_title( $post_principal->ID );
             $link = get_permalink( $post_principal->ID );
             $thumb = get_the_post_thumbnail_url( $post_principal->ID, 'full');
-            $categoria = get_the_category( $post_principal->ID )[0]->name ;
+            $categoria = get_the_category( $post_principal->ID )[0]->name;
+            $linha_fina = get_field('linha_fina', $post_principal->ID);
+            $category_id = get_cat_ID( $categoria );
+            $category_link = get_category_link( $category_id );
         ?>
           <div class="carousel-cell">
-            <a href="<?php echo $link ?>">
+            
               <div class="row">
-                <div class="col-md-8">
-                  <div class="bg-img img-hero-slide" style="background-image: url(<?php echo $thumb ?>)"></div>
+                <div class="col-lg-8 col-12">
+                  <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                    <div class="bg-img img-hero-slide" style="background-image: url(<?php echo $thumb ?>)"></div>
+                  </a>
                 </div>
-                <div class="col-md-4">
-                  <p class="hero-slide-cat"><?php echo $categoria ?></p>
-                  <h3><?php echo $title ?></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere urna. Duis ultricies lacus sed</p>
+                <div class="col-lg-4 col-12 p-15">
+                  <div class="p-15">
+                    <p class="name-categoria">
+                      <a href="<?php echo $category_link ?>">
+                        <?php echo $categoria ?>
+                      </a>
+                      <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
+                    </p>
+                    <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                      <h1><?php echo $title ?></h1>
+                      <p class="subtitle"><?php echo $linha_fina ?></p>
+                      <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>"><p class="d-block d-lg-none text-right small"><strong>Leia mais</strong></p></a>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </a>
+            
           </div>
 
         <?php
@@ -59,75 +79,115 @@
 
 <section class="container">
   <div class="row">
-    <div class="offset-md-1 col-md-10">
+    <div class="offset-lg-1 col-lg-10">
       <div class="row">
 
-        <div class="col-md-4">
-          <div class="box-cats-home">
-            <span>categoria</span>
-            <span>20/12/2020</span>
-            <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-            <h4>titulo lorem ipsum dolor amet</h4>
-            <p>Purus faucibus ornare suspendisse sed. Et netus et malesuada fames ac turpis egestas. Arcu vitae elementum.</p>
-          </div>      
-        </div>
+        <?php
+          $formatos_1 = get_field('formatos_1', $pageID);
+          if( $formatos_1 ) {
+      
+            foreach( $formatos_1 as $formato_1 ) {
+              $post_formato_1 = $formato_1['post_formato_1'];
+              $title = get_the_title( $post_formato_1->ID );
+              $link = get_permalink( $post_formato_1->ID );
+              $thumb = get_the_post_thumbnail_url( $post_formato_1->ID, 'full');
+              $categoria = get_the_category( $post_formato_1->ID )[0]->name;
+              $linha_fina = get_field('linha_fina', $post_formato_1->ID);
+              $category_id = get_cat_ID( $categoria );
+              $category_link = get_category_link( $category_id );
+          ?>
 
-        <div class="col-md-4">
-          <div class="box-cats-home">
-            <span>categoria</span>
-            <span>20/12/2020</span>
-            <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-            <h4>titulo lorem ipsum dolor amet</h4>
-            <p>Purus faucibus ornare suspendisse sed. Et netus et malesuada fames ac turpis egestas. Arcu vitae elementum.</p>
-          </div>      
-        </div>
+          <div class="col-lg-4">
+            
+              <div class="box-cats-home">
+                <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                  <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+                </a>
+                <div class="name-categoria">
+                  <a href="<?php echo $category_link ?>">
+                    <span><?php echo $categoria ?></span>
+                  </a>
+                  <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+                </div>
+                <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                  <h4><?php echo $title ?></h4>
+                  <p class="subtitle"><?php echo $linha_fina ?></p>
+                </a>
+              </div>
+            
+          </div>
 
-        <div class="col-md-4">
-          <h5>LEIA MAIS</h5>
+          <?php
+          wp_reset_postdata();
+            }
+          }
+        ?>
+
+        <div class="col-lg-4 col-8 offset-2 offset-lg-0 read-more">
+          
+          <h6><?php echo get_field('titulo_leia_mais') ?></h6>
+          <div class="line-gradient more"></div>
         
-          <div class="more-home">
-            <h4>Purus faucibus ornare suspendisse sed</h4>
-          </div>
-          <div class="more-home">
-            <h4>Tortor consequat id porta nibh venenatis cras sed felis</h4>
-          </div>
-          <div class="more-home">
-            <h4>Purus faucibus ornare suspendisse sed</h4>
-          </div>
-          <div class="more-home">
-            <h4>Tortor consequat id porta nibh venenatis cras sed felis</h4>
-          </div>
+          <?php 
+          $posts_last = new WP_Query( array(
+            'post_type'      => 'post',
+            'post_status'    => 'publish',
+            'posts_per_page' => 4,
+          ) );
+          
+          foreach ( $posts_last->posts as $post ) {
+            $title = get_the_title( $post->ID );
+            $link = get_permalink( $post->ID );
+          ?>
+
+            <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+              <h4><?php echo $title ?></h4>
+            </a>
+            <div class="line-gradient more-home"></div>
+
+          <?php } ?>
+
         </div>
 
-        <div class="col-md-4">
-          <div class="box-cats-home">
-            <span>categoria</span>
-            <span>20/12/2020</span>
-            <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-            <h4>titulo lorem ipsum dolor amet</h4>
-            <p>Purus faucibus ornare suspendisse sed. Et netus et malesuada fames ac turpis egestas. Arcu vitae elementum.</p>
-          </div>      
-        </div>
+        <?php
+          $formatos_2 = get_field('formatos_2', $pageID);
+          if( $formatos_2 ) {
+      
+            foreach( $formatos_2 as $formato_2 ) {
+              $post_formato_2 = $formato_2['post_formato_2'];
+              $title = get_the_title( $post_formato_2->ID );
+              $link = get_permalink( $post_formato_2->ID );
+              $thumb = get_the_post_thumbnail_url( $post_formato_2->ID, 'full');
+              $categoria = get_the_category( $post_formato_2->ID )[0]->name;
+              $linha_fina = get_field('linha_fina', $post_formato_2->ID);
+              $category_id = get_cat_ID( $categoria );
+              $category_link = get_category_link( $category_id );
+          ?>
 
-        <div class="col-md-4">
-          <div class="box-cats-home">
-            <span>categoria</span>
-            <span>20/12/2020</span>
-            <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-            <h4>titulo lorem ipsum dolor amet</h4>
-            <p>Purus faucibus ornare suspendisse sed. Et netus et malesuada fames ac turpis egestas. Arcu vitae elementum.</p>
-          </div>      
-        </div>
+          <div class="col-lg-4">
+            <div class="box-cats-home">
+              <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+              </a>
+              <div class="name-categoria">
+                <a href="<?php echo $category_link ?>">
+                  <span><?php echo $categoria ?></span>
+                </a>
+                <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
+              </div>
+              <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+                <h4><?php echo $title ?></h4>
+                <p class="subtitle"><?php echo $linha_fina ?></p>
+              </a>
+            </div>
+            
+          </div>
 
-        <div class="col-md-4">
-          <div class="box-cats-home">
-            <span>categoria</span>
-            <span>20/12/2020</span>
-            <div class="bg-img img-cats-home" style="background-image: url(https://via.placeholder.com/560x365)"></div>
-            <h4>titulo lorem ipsum dolor amet</h4>
-            <p>Purus faucibus ornare suspendisse sed. Et netus et malesuada fames ac turpis egestas. Arcu vitae elementum.</p>
-          </div>      
-        </div>
+          <?php
+          wp_reset_postdata();
+            }
+          }
+        ?>
 
 
       </div>
@@ -136,14 +196,17 @@
 </section>
 
 
-
 <section class="container">
   <div class="row">
-    <div class="offset-md-2 col-md-8">
-      
-      <h3>Assista</h3>
 
-      <div class="carousel" data-flickity='{ "freeScroll": true }'>
+    <div class="col-10 offset-1 col-lg-10 offset-lg-1">
+      <div class="line-gradient"></div>
+    </div>
+
+    <div class="offset-lg-2 col-lg-8">
+      <h2 class="title-watch"><?php echo get_field('titulo_multimidias'); ?></h2>
+
+      <div class="carousel slider-videos" data-flickity='{ "freeScroll": true }'>
 
         <?php 
         $posts_midias = new WP_Query( array(
@@ -160,32 +223,35 @@
         ) );
         
         foreach ( $posts_midias->posts as $post ) {
+          $thumbvideo = get_the_post_thumbnail_url( $post->ID, 'full');
+          $link = get_permalink( $post_formato_2->ID );
         ?>
 
           <div class="carousel-cell slide-video">
-            <div class="bg-img slide-video-home" style="background-image: url(http://localhost:8000/wp-content/uploads/2020/10/architecture-buildings-city-fog-373965-scaled.jpg)"></div>
+            <!-- <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"> -->
+            <!-- </div> -->
+            <img src="<?php echo $thumbvideo ?>" alt="<?php echo get_the_title( $post->ID ) ?>">
             <h3><?php echo get_the_title( $post->ID ); ?></h3>
+            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID ) ?>">
+              <button class="player-video"></button>
+            </a>
+
           </div>
         
         <?php } ?>
 
       </div>
-
-
     </div>
+
+    <div class="col-10 offset-1 col-lg-10 offset-lg-1">
+      <div class="line-gradient"></div>
+    </div>
+
   </div>
 </section>
 
 <?php componente_newsletter() ?>
 
-<section class="container-fluid bg-grey mt-5">
-  <div class="row">
-    <div class="offset-lg-3 col-lg-6">
-        <h2>Sit amet massa vitae tortor faucibus ornare faucibus condimentum.</h2>
-        <button>paypall</button>
-    </div>
-  </div>
-</section>
-
+<?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

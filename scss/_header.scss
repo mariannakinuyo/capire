@@ -174,8 +174,8 @@ header {
   width: 8px;
   height: 8px;
   background-color: var(--purple);
-  -webkit-mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
-  mask: url(http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
+  -webkit-mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
+  mask: url(http://capiremov.org/wp-content/themes/sof-mmm/images/down.svg) no-repeat center;
   margin: auto;
   display: block;
   margin-right: 5px;
@@ -183,15 +183,15 @@ header {
 
 li.menu-item-has-children::after {
   content:'';
-  background-image: url('http://localhost:8000/wp-content/themes/sof-mmm/images/down.svg');
+  background-image: url('http://capiremov.org/wp-content/themes/sof-mmm/images/down.svg');
   width: 8px;
   height: 6px;
   display: inline-block;
   margin-left: 6px;
   @media screen and (max-width: 1199px) {
     position: absolute;
-    top: 28px;
-    right: 28px;
+    top: 18px;
+    left: 67px;
   }
 }
 
@@ -268,7 +268,7 @@ ul.menu-menu-primario-container {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: var(--purple);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -285,10 +285,11 @@ ul.menu-menu-primario-container {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 0;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 25px;
+  padding-top: 108px;
   right: -100px;
-  background: #ededed;
+  background: white;
+  border: 1px solid var(--liner-gradient);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
@@ -297,8 +298,8 @@ ul.menu-menu-primario-container {
 }
 
 #menu-mobile li {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 5px 0;
+  font-size: 18px;
   position: relative;
 }
 

@@ -9,7 +9,7 @@
         <h2><?php echo $title_regiao ?></h2>
       </div>
 
-      <div class="carousel slider-regioes" data-flickity='{ "freeScroll": true, "contain": true , "groupCells": true  }'>
+      <div class="carousel slider-regioes" data-flickity='{ "freeScroll": true, "contain": true }'>
 
 
         <?php 

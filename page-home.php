@@ -37,7 +37,7 @@ $pageID = get_the_ID();
             
               <div class="row">
                 <div class="col-lg-8 col-12">
-                  <a href="<?php echo $link ?>">
+                  <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                     <div class="bg-img img-hero-slide" style="background-image: url(<?php echo $thumb ?>)"></div>
                   </a>
                 </div>
@@ -49,9 +49,10 @@ $pageID = get_the_ID();
                       </a>
                       <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                     </p>
-                    <a href="<?php echo $link ?>">
+                    <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                       <h1><?php echo $title ?></h1>
                       <p class="subtitle"><?php echo $linha_fina ?></p>
+                      <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>"><p class="d-block d-lg-none text-right small"><strong>Leia mais</strong></p></a>
                     </a>
                   </div>
                 </div>
@@ -99,16 +100,16 @@ $pageID = get_the_ID();
           <div class="col-lg-4">
             
               <div class="box-cats-home">
-                <a href="<?php echo $link ?>">
+                <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                   <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
                 </a>
                 <div class="name-categoria">
-                  <a href="<?php echo $link ?>">
+                  <a href="<?php echo $category_link ?>">
                     <span><?php echo $categoria ?></span>
                   </a>
                   <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
                 </div>
-                <a href="<?php echo $link ?>">
+                <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                   <h4><?php echo $title ?></h4>
                   <p class="subtitle"><?php echo $linha_fina ?></p>
                 </a>
@@ -122,7 +123,7 @@ $pageID = get_the_ID();
           }
         ?>
 
-        <div class="col-lg-4 col-xs-8 offset-xs-2 read-more">
+        <div class="col-lg-4 col-8 offset-2 offset-lg-0 read-more">
           
           <h6><?php echo get_field('titulo_leia_mais') ?></h6>
           <div class="line-gradient more"></div>
@@ -139,7 +140,9 @@ $pageID = get_the_ID();
             $link = get_permalink( $post->ID );
           ?>
 
-            <a href="<?php echo $link ?>"><h4><?php echo $title ?></h4></a>
+            <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+              <h4><?php echo $title ?></h4>
+            </a>
             <div class="line-gradient more-home"></div>
 
           <?php } ?>
@@ -163,14 +166,16 @@ $pageID = get_the_ID();
 
           <div class="col-lg-4">
             <div class="box-cats-home">
-              <a href="<?php echo $link ?>">
+              <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                 <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
               </a>
               <div class="name-categoria">
-                <a href="<?php echo $category_link ?>"><span><?php echo $categoria ?></span></a>
+                <a href="<?php echo $category_link ?>">
+                  <span><?php echo $categoria ?></span>
+                </a>
                 <span class="float-right date"><?php echo get_the_date('d/m/Y') ?></span>
               </div>
-              <a href="<?php echo $link ?>">
+              <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
                 <h4><?php echo $title ?></h4>
                 <p class="subtitle"><?php echo $linha_fina ?></p>
               </a>
@@ -223,10 +228,11 @@ $pageID = get_the_ID();
         ?>
 
           <div class="carousel-cell slide-video">
-            <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )">
-            </div>
+            <!-- <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"> -->
+            <!-- </div> -->
+            <img src="<?php echo $thumbvideo ?>" alt="<?php echo get_the_title( $post->ID ) ?>">
             <h3><?php echo get_the_title( $post->ID ); ?></h3>
-            <a href="<?php echo $link ?>">
+            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID ) ?>">
               <button class="player-video"></button>
             </a>
 
@@ -246,6 +252,6 @@ $pageID = get_the_ID();
 
 <?php componente_newsletter() ?>
 
-<?php componente_doacao() ?>
+<?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

@@ -46,7 +46,7 @@
               <div class="float-right">
                 <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
                 <div class="button-doe">
-                  <a href="">APOIE</a>
+                  <a href="#donation">APOIE</a>
                 </div>
               </div>
             </div>

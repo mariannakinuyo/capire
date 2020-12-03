@@ -3,7 +3,8 @@ html, body {
   font-family: var(--font-lato);
   color: $dark;
   overflow-x: hidden;
-  font-size: 18px; //22px
+  font-size: 18px;
+  scroll-behavior: smooth;
   &.overflow-hidden {
     overflow-y: hidden;
   }
@@ -185,3 +186,33 @@ ul {
 .red {
   color: var(--red);
 }
+
+
+
+
+.page-soon {
+  overflow: hidden;
+  .img-soon {
+    width: 38%;
+    margin-top: 110px;
+    @media screen and (max-width: 1199px) {
+      margin-top: 20%;
+      width: 65%;
+    }
+  }
+  p {
+    color: #663399;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .text-right {
+    margin-top: 80px;
+    padding-right: 10%;
+    @media screen and (max-width: 1199px) {
+      margin-top: 80px;
+      padding-right: 30px;
+    }
+  }
+}
+
