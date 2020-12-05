@@ -173,6 +173,18 @@ ul {
   margin-right: 5px;
 }
 
+.youtube span {
+  width: 18px;
+  height: 16px;
+  background-color: var(--purple);
+  -webkit-mask: url(../images/youtube.svg) no-repeat center;
+  mask: url(../images/youtube.svg) no-repeat center;
+  margin: auto;
+  display: block;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+
 .line-gradient {
   background: var(--linear-gradient);
   width: 100%;
@@ -186,9 +198,6 @@ ul {
 .red {
   color: var(--red);
 }
-
-
-
 
 .page-soon {
   overflow: hidden;

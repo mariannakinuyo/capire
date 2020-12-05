@@ -1,10 +1,31 @@
-<?php function componente_relacionados() { ?>
+<?php function componente_relacionados() { 
+    
+$lang = get_bloginfo("language");
+
+if ( $lang === 'en-US' ) {
+    $page = get_page_by_path( 'home-en' );
+    $titulo_rel = get_field('titulo_artigos_relacionados_en', $page->ID);
+
+} elseif ( $lang === 'es' ) {
+    $page = get_page_by_path( 'home-es' );
+    $titulo_rel = get_field('titulo_artigos_relacionados_es', $page->ID);
+
+} elseif ( $lang === 'fr-FR' ) {
+    $page = get_page_by_path( 'home-fr' );
+    $titulo_rel = get_field('titulo_artigos_relacionados_fr', $page->ID);
+
+} elseif ( $lang === 'pt-BR' ) {
+    $page = get_page_by_path( 'home' );
+    $titulo_rel = get_field('titulo_artigos_relacionados', $page->ID);
+}    
+    
+?>
 
 
 <div class="container relacionados">
     <div class="row">
         <div class="col-12 col-lg-4 offset-lg-4">
-            <h3 class="highlight text-center"><strong>ARTIGOS RELACIONADOS</strong></h3>
+            <h3 class="highlight text-center"><strong><?php echo $titulo_rel ?></strong></h3>
         </div>
     </div>
 

@@ -9,8 +9,8 @@
                         <a href="<?php echo home_url() ?>">
                             <img class="logo" src="<?php bloginfo('template_url'); ?>/images/logo-branco-capire.png" alt="">
                         </a>
-                        <img src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
-                        <p class="ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
+                        <img class="d-none d-lg-block" src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
+                        <p class="d-none d-lg-block ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
 
                     </div>
                 </div>
@@ -21,22 +21,30 @@
                 <div class="col-12 col-lg-2">
                     <p class="small">SIGA NOSSAS REDES</p>
                     <div class="social">
-                        <a href="" class="facebook">
+                        <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
                             <span></span>
                         </a>
-                        <a href="" class="instagram">
+                        <a href="https://instagram.com/capiremov" class="instagram" target="_blank">
                             <span></span>
                         </a>
-                        <a href="" class="twitter">
+                        <a href="https://twitter.com/capiremov" class="twitter" target="_blank">
                             <span></span>
                         </a>
-                        <a href="" class="whatsapp">
+                        <a href="https://www.youtube.com/channel/UCTS7q5yxlq7wQWp9wu2w-FQ/" class="youtube" target="_blank">
+                            <span></span>
+                        </a>
+                        <!-- <a href="" class="whatsapp">
                             <span></span>
                         </a>
                         <a href="" class="telegram">
                             <span></span>
-                        </a>
+                        </a> -->
                     </div>
+                </div>
+
+                <div class="col-12 col-lg-2 d-lg-none d-block mt-4">
+                    <img src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
+                    <p class="ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ $pageID = get_the_ID();
 <section class="container p-top">
   <div class="row">
     <div class="col-lg-6 offset-lg-3 my-5">
-        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
+        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo_es', $pageID) ?></strong></h3>
     </div>
   </div>
 </section>
@@ -17,7 +17,7 @@ $pageID = get_the_ID();
     <div class="col-lg-10 offset-lg-1 col-12">
 
       <?php
-        $rows = get_field('carousel_principal', $pageID);
+        $rows = get_field('carousel_principal_es', $pageID);
         if( $rows ) {
       ?>
         <div class="carousel hero-slide" data-flickity='{ "autoPlay": true }'>
@@ -83,7 +83,7 @@ $pageID = get_the_ID();
       <div class="row">
 
         <?php
-          $formatos_1 = get_field('formatos_1', $pageID);
+          $formatos_1 = get_field('formatos_1_es', $pageID);
           if( $formatos_1 ) {
       
             foreach( $formatos_1 as $formato_1 ) {
@@ -125,7 +125,7 @@ $pageID = get_the_ID();
 
         <div class="col-lg-4 col-8 offset-2 offset-lg-0 read-more">
           
-          <h6><?php echo get_field('titulo_leia_mais') ?></h6>
+          <h6><?php echo get_field('titulo_leia_mais_es') ?></h6>
           <div class="line-gradient more"></div>
         
           <?php 
@@ -150,7 +150,7 @@ $pageID = get_the_ID();
         </div>
 
         <?php
-          $formatos_2 = get_field('formatos_2', $pageID);
+          $formatos_2 = get_field('formatos_2_es', $pageID);
           if( $formatos_2 ) {
       
             foreach( $formatos_2 as $formato_2 ) {
@@ -204,7 +204,7 @@ $pageID = get_the_ID();
     </div>
 
     <div class="offset-lg-2 col-lg-8">
-      <h2 class="title-watch"><?php echo get_field('titulo_multimidias'); ?></h2>
+      <h2 class="title-watch"><?php echo get_field('titulo_multimidias_es'); ?></h2>
 
       <div class="carousel slider-videos" data-flickity='{ "freeScroll": true }'>
 
@@ -250,39 +250,7 @@ $pageID = get_the_ID();
   </div>
 </section>
 
-
-<?php
-
-    $titulo_news = get_field('titulo_newsletter', $pageID);
-    $texto_news = get_field('texto_newsletter', $pageID);
-
-  // if ( $url === "http://capiremov.org" ) {
-  //   $titulo_news = get_field('titulo_newsletter', $pageID);
-  //   $texto_news = get_field('texto_newsletter', $pageID);
-  // }
-
-?>
-
-<section class="container">
-  <div class="wrap-newsletter">
-    <div class="row">
-      <div class="offset-md-2 col-md-4 col-12">
-        <div class="element-left">
-          <h2 class="purple"><?php echo $titulo_news ?></h2>
-          <p><?php echo $texto_news ?></p>
-        </div>
-      </div>
-      <div class="col-md-4 col-12">
-        <div class="element-right">
-          <input type="text" placeholder="Nome">
-          <input type="text" placeholder="E-mail">
-          <button class="float-right">Assinar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section>
+<?php componente_newsletter() ?>
 
 <?php /* componente_doacao() */ ?>
 

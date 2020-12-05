@@ -1,5 +1,24 @@
 <?php function componente_regioes() { 
-  $title_regiao = get_field('titulo_regioes');
+  
+  $lang = get_bloginfo("language");
+
+  if ( $lang === 'en-US' ) {
+      $page = get_page_by_path( 'home-en' );
+      $title_regiao = get_field('titulo_regioes_en');
+
+  } elseif ( $lang === 'es' ) {
+      $page = get_page_by_path( 'home-es' );
+      $title_regiao = get_field('titulo_regioes_es');
+
+  } elseif ( $lang === 'fr-FR' ) {
+      $page = get_page_by_path( 'home-fr' );
+      $title_regiao = get_field('titulo_regioes_fr');
+
+  } elseif ( $lang === 'pt-BR' ) {
+      $page = get_page_by_path( 'home' );
+      $title_regiao = get_field('titulo_regioes');
+  }
+
 ?>
 
 <section class="container-fluid bg-grey home-regions">
@@ -9,9 +28,7 @@
         <h2><?php echo $title_regiao ?></h2>
       </div>
 
-      <div class="carousel slider-regioes" data-flickity='{ "freeScroll": true, "contain": true }'>
-
-
+      <div class="carousel slider-regioes" data-flickity='{ "freeScroll": true, "contain": true, "groupCells": true }'>
         <?php 
         $posts_regs = get_posts(array(
           'post_type' => 'post',

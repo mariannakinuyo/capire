@@ -2,6 +2,9 @@ footer {
   padding: 30px 0;
   background-color: var(--purple);
   color: #fff;
+  @media screen and (max-width: 1199px) {
+    padding: 30px 0 15px;
+  }
   .menu li {
     &.current-menu-item {
       a{
@@ -20,7 +23,7 @@ footer {
     display: block;
   }
 
-  .facebook span, .instagram span, .twitter span, .whatsapp span, .telegram span {
+  .facebook span, .instagram span, .twitter span, .whatsapp span, .telegram span, .youtube span {
     background-color: #fff;
   }
 
@@ -29,6 +32,12 @@ footer {
       color: #fff;
       font-family: var(--font-oswald);
       font-size: 16px;
+    }
+  }
+
+  p.small {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 0px;
     }
   }
 }

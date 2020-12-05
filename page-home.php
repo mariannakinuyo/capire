@@ -252,6 +252,7 @@ $pageID = get_the_ID();
 
 <?php componente_newsletter() ?>
 
+
 <?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

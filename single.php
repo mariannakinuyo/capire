@@ -116,6 +116,6 @@
 
 <?php componente_newsletter() ?>
 
-<?php componente_doacao() ?>
+<?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>
