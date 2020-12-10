@@ -34,9 +34,9 @@
         }
     }
     .logo-redu-menu {
-      width: 28px;
-      margin-right: 24px;
-      margin-top: -13px;
+      width: 55px;
+      margin-right: 20px;
+      margin-top: 1px;
       display: inline-block;
       transition: width 0.5s;
     }
@@ -131,6 +131,10 @@
   a {
     text-transform: lowercase;
     font-size: 14px;
+    color: var(--purple);
+  }
+  a:hover {
+    color: var(--purple);
   }
 }
 
@@ -317,4 +321,9 @@ ul.menu-menu-primario-container {
   ul.sub-menu {
     display: none;
   }
+}
+
+.botao-secundario {
+  border: 1px solid var(--purple);
+  color: var(--purple);
 }

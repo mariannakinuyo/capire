@@ -1,4 +1,29 @@
-<?php wp_footer(); ?>
+<?php wp_footer(); 
+
+$lang = get_bloginfo("language");
+
+if ( $lang === 'en-US' ) {
+  $page = get_page_by_path( 'home-en' );
+  $texto_cc = get_field('texto_cc_en', $page->ID);
+  $texto_redes = get_field('texto_redes_sociais_en', $page->ID);
+
+} elseif ( $lang === 'es' ) {
+  $page = get_page_by_path( 'home-es' );
+  $texto_cc = get_field('texto_cc_es', $page->ID);
+  $texto_redes = get_field('texto_redes_sociais_es', $page->ID);
+
+} elseif ( $lang === 'fr-FR' ) {
+  $page = get_page_by_path( 'home-fr' );
+  $texto_cc = get_field('texto_cc_fr', $page->ID);
+  $texto_redes = get_field('texto_redes_sociais_fr', $page->ID);
+
+} elseif ( $lang === 'pt-BR' ) {
+  $page = get_page_by_path( 'home' );
+  $texto_cc = get_field('texto_cc', $page->ID);
+  $texto_redes = get_field('texto_redes_sociais', $page->ID);
+}
+
+?>
 
 <footer>
     <div class="footer">
@@ -10,16 +35,16 @@
                             <img class="logo" src="<?php bloginfo('template_url'); ?>/images/logo-branco-capire.png" alt="">
                         </a>
                         <img class="d-none d-lg-block" src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
-                        <p class="d-none d-lg-block ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
+                        <p class="d-none d-lg-block ex-small"><?php echo $texto_cc ?></p>
 
                     </div>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <p class="small">NOME DO SITE</p>
+                    <p class="small">CAPIRE</p>
                     <?php  wp_nav_menu( array( 'menu' => 'footer', 'container' => FALSE, 'menu_class' => 'menu-footer', 'menu_id' => false ) ); ?>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <p class="small">SIGA NOSSAS REDES</p>
+                    <p class="small"><?php echo $texto_redes ?></p>
                     <div class="social">
                         <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
                             <span></span>
@@ -33,18 +58,12 @@
                         <a href="https://www.youtube.com/channel/UCTS7q5yxlq7wQWp9wu2w-FQ/" class="youtube" target="_blank">
                             <span></span>
                         </a>
-                        <!-- <a href="" class="whatsapp">
-                            <span></span>
-                        </a>
-                        <a href="" class="telegram">
-                            <span></span>
-                        </a> -->
                     </div>
                 </div>
 
                 <div class="col-12 col-lg-2 d-lg-none d-block mt-4">
                     <img src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
-                    <p class="ex-small">Dictum non consectetur a erat nam. Sem nulla pharetra</p>
+                    <p class="ex-small"><?php echo $texto_cc ?></p>
                 </div>
             </div>
         </div>

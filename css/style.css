@@ -295,9 +295,9 @@ ul {
   height: 0px;
 }
 .menu-principal.scroll .logo-redu-menu {
-  width: 28px;
-  margin-right: 24px;
-  margin-top: -13px;
+  width: 55px;
+  margin-right: 20px;
+  margin-top: 1px;
   display: inline-block;
   transition: width 0.5s;
 }
@@ -384,6 +384,10 @@ ul {
 .list-tags a {
   text-transform: lowercase;
   font-size: 14px;
+  color: var(--purple);
+}
+.list-tags a:hover {
+  color: var(--purple);
 }
 
 header {
@@ -563,6 +567,11 @@ ul.menu-menu-primario-container {
 }
 .mobile-menu ul.sub-menu {
   display: none;
+}
+
+.botao-secundario {
+  border: 1px solid var(--purple);
+  color: var(--purple);
 }
 
 footer {

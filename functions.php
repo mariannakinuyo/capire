@@ -37,7 +37,10 @@ add_action( 'widgets_init', 'tutsup_sidebars' );
 function register_my_menu() {
 
 	register_nav_menus( array(
-		'menu-tags'  => 'Menu tags'
+		'menu-tags'  => 'Menu tags',
+		'menu-primario'  => 'Menu primário',
+		'footer'  => 'Footer',
+
 		) );
 		// 'menu-primario' => __( 'Menu primário' ),
 		// 'menu-tags'  => __( 'Menu tags' ),

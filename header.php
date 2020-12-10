@@ -19,45 +19,36 @@
 
 <header>
   <div class="container-fluid d-none d-lg-block">
-    <!-- <div class="social-lang"> -->
-      <div class="row b-bottom">
-        <div class="container social-lang">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="social">
-                <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
-                  <span></span>
-                </a>
-                <a href="https://instagram.com/capiremov" class="instagram" target="_blank">
-                  <span></span>
-                </a>
-                <a href="https://twitter.com/capiremov" class="twitter" target="_blank">
-                  <span></span>
-                </a>
-                <a href="https://www.youtube.com/channel/UCTS7q5yxlq7wQWp9wu2w-FQ/" class="youtube" target="_blank">
-                  <span></span>
-                </a>
-                <!-- <a href="" class="whatsapp">
-                  <span></span>
-                </a>
-                <a href="" class="telegram">
-                  <span></span>
-                </a> -->
-
-              </div>
+    <div class="row b-bottom">
+      <div class="container social-lang">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="social">
+              <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
+                <span></span>
+              </a>
+              <a href="https://instagram.com/capiremov" class="instagram" target="_blank">
+                <span></span>
+              </a>
+              <a href="https://twitter.com/capiremov" class="twitter" target="_blank">
+                <span></span>
+              </a>
+              <a href="https://www.youtube.com/channel/UCTS7q5yxlq7wQWp9wu2w-FQ/" class="youtube" target="_blank">
+                <span></span>
+              </a>
             </div>
-            <div class="col-md-4">
-              <div class="float-right">
-                <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
-                <div class="button-doe">
-                  <a href="#donation">APOIE</a>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="float-right">
+              <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
+              <div class="button-doe">
+                <a href="#donation">APOIE</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <!-- </div> -->
+    </div>
   </div>
 
   <div class="container-fluid d-none d-lg-block">
@@ -72,11 +63,10 @@
           <div class="list-menu">
             <div>
               <a href="<?php echo home_url() ?>">
-                <img class="logo-redu-menu" src="<?php bloginfo('template_url'); ?>/images/logo-reduzido-capire.png" alt="">
+                <img class="logo-redu-menu" src="<?php bloginfo('template_url'); ?>/images/logo-capire.png" alt="">
               </a>
               <?php  wp_nav_menu( array( 'menu' => 'menu-primario', 'container' => FALSE, 'menu_class' => 'menu-menu-primario-container', 'menu_id' => false ) ); ?>
             </div>
-            
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@
 
 ?>
 
-<section class="container">
+<section id="newsletter" class="container">
   <div class="wrap-newsletter">
     <div class="row">
       <div class="offset-md-2 col-md-4 col-12">
