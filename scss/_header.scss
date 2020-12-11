@@ -12,14 +12,21 @@
 
 //aqui
 
-// .social-lang {
-//   background-color: #DEDEDE;
-// }
-
 .social {
   padding-top: 4px;
   a {
     display: inline-block;
+  }
+}
+
+.social-lang {
+  height: 32px;
+  .social {
+    display: inline;
+    position: absolute;
+    top: 4px;
+    padding-left: 10px;
+    padding-top: 0px;
   }
 }
 
@@ -206,6 +213,7 @@ li.menu-item-has-children::after {
   display: inline-block;
   background-color: var(--purple);
   margin-left: 10px;
+  border: 0px;
   a {
     color: #fff;
 
@@ -323,7 +331,40 @@ ul.menu-menu-primario-container {
   }
 }
 
+// .botao-secundario {
+//   border: 1px solid var(--purple);
+//   color: var(--purple);
+//   display: inline;
+//   padding: 2px 13px;
+//   font-size: 12px;
+//   border-radius: 3px;
+//   background-color: white;
+//   margin-bottom: 5px;
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
+
+
 .botao-secundario {
-  border: 1px solid var(--purple);
-  color: var(--purple);
+  padding: 2px 13px;
+  font-size: 12px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: var(--purple);
+  margin-left: 10px;
+  border: 0px;
+  color: #fff;
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    
+  }
 }

@@ -11,15 +11,30 @@
         margin-bottom: 38px;
         margin-top: 40px;
     }
+
+    .name-categoria.tag{
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .categories {
-    .name-categoria {
+    .name-categoria.title{
         font-size: 26px;
-        margin-top: 40px;
+        // margin-top: 40px;
     }
 
     .description-cat {
         margin-bottom: 48px;
+    }
+}
+
+.analises {
+    p.subtitle {
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 16px;
     }
 }

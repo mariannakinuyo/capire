@@ -19,11 +19,11 @@ $posts_categoria = new WP_Query(array(
 <div class="container p-top categories">
     <div class="row">
 
-        <div class="col-12 col-lg-7">
-            <h4 class="name-categoria"><?php echo $categoria->name ?></h4>
+        <div class="col-12 col-lg-7 description-cat">
+            <h4 class="name-categoria title"><?php echo $categoria->name ?></h4>
 
             <?php if ( category_description() ) { ?>
-                <div class="description-cat"><?php echo category_description(); ?></div>
+                <div><?php echo category_description(); ?></div>
             <?php } ?>
         </div>
 
@@ -33,14 +33,20 @@ $posts_categoria = new WP_Query(array(
 
         <?php foreach ($posts_categoria->posts as $i => $post) {
             $thumb = get_the_post_thumbnail_url( $post->ID, 'full');   
-            $linha_fina = get_field('linha_fina', $post->ID);  
+            $linha_fina = get_field('linha_fina', $post->ID);
+            $tags = get_the_tags();
+            foreach( $tags as $tag ) {
+                $tag = $tag->name;
+            }
         ?>
 
             <div class="col-lg-4">
                 <a href="<?php the_permalink() ?>">
                 <div class="box-cats-home">
                     
-                    <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)"></div>
+                    <div class="bg-img img-cats-home" style="background-image: url(<?php echo $thumb ?>)">
+                        <span class="cat-reg"><?php echo $tag ?></span>
+                    </div>
                         
                     <h4><?php the_title(); ?></h4>
                     <p class="subtitle"><?php echo $linha_fina ?></p>

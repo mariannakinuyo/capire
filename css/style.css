@@ -21,13 +21,22 @@
   margin-bottom: 38px;
   margin-top: 40px;
 }
+.tags .name-categoria.tag:after {
+  display: none;
+}
 
-.categories .name-categoria {
+.categories .name-categoria.title {
   font-size: 26px;
-  margin-top: 40px;
 }
 .categories .description-cat {
   margin-bottom: 48px;
+}
+
+.analises p.subtitle {
+  margin-bottom: 5px;
+}
+.analises p {
+  font-size: 16px;
 }
 
 html, body {
@@ -145,7 +154,7 @@ ul {
 .p-top {
   padding-top: 216px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 989px) {
   .p-top {
     padding-top: 63px;
   }
@@ -283,6 +292,17 @@ ul {
 }
 .social a {
   display: inline-block;
+}
+
+.social-lang {
+  height: 32px;
+}
+.social-lang .social {
+  display: inline;
+  position: absolute;
+  top: 4px;
+  padding-left: 10px;
+  padding-top: 0px;
 }
 
 .menu-principal {
@@ -458,6 +478,7 @@ li.menu-item-has-children::after {
   display: inline-block;
   background-color: var(--purple);
   margin-left: 10px;
+  border: 0px;
 }
 .button-doe a {
   color: #fff;
@@ -570,10 +591,22 @@ ul.menu-menu-primario-container {
 }
 
 .botao-secundario {
-  border: 1px solid var(--purple);
-  color: var(--purple);
+  padding: 2px 13px;
+  font-size: 12px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: var(--purple);
+  margin-left: 10px;
+  border: 0px;
+  color: #fff;
 }
-
+.botao-secundario a {
+  color: #fff;
+}
+.botao-secundario a:hover {
+  color: #fff;
+  cursor: pointer;
+}
 footer {
   padding: 30px 0;
   background-color: var(--purple);
@@ -618,6 +651,9 @@ footer .menu-footer li a {
 }
 .relacionados p.name-categoria::after {
   display: none;
+}
+.relacionados .highlight::after {
+  margin-top: 12px;
 }
 
 .card-relacionados {
@@ -1100,7 +1136,7 @@ article .author p {
   height: 40px;
   float: right;
   margin-right: -30px;
-  margin-top: 12px;
+  margin-top: -16px;
 }
 @media screen and (max-width: 1199px) {
   .highlight::after {

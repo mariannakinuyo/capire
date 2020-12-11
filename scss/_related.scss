@@ -10,6 +10,12 @@
     p.name-categoria::after {
         display: none;
     }
+
+    .highlight {
+        &::after {
+            margin-top: 12px;
+        }
+    }
 }
 
 .card-relacionados {

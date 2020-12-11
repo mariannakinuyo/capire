@@ -64,7 +64,7 @@
                           <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                         </div>
                         
-                        <h5><?php echo get_the_title( $post->ID ); ?></h5>
+                        <h4><?php echo get_the_title( $post->ID ); ?></h4>
                     </div>
                 </a>
             </div>

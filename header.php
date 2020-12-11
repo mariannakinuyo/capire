@@ -17,12 +17,35 @@
 
 <body <?php body_class(); ?>>
 
+<?php  
+
+$lang = get_bloginfo("language");
+
+if ( $lang === 'en-US' ) {
+  $link = "http://capiremov.org/en/about-us/";
+
+} elseif ( $lang === 'es' ) {
+  $link = "http://capiremov.org/es/quienes-somos/";
+
+} elseif ( $lang === 'fr-FR' ) {
+  $link = "http://capiremov.org/fr/a-propos-de-nous/";
+
+} elseif ( $lang === 'pt-BR' ) {
+  $link = "http://capiremov.org/quem-somos/";
+
+}
+
+?>
+
 <header>
   <div class="container-fluid d-none d-lg-block">
     <div class="row b-bottom">
       <div class="container social-lang">
         <div class="row">
           <div class="col-md-8">
+            <button class="botao-secundario">
+              <a href="<?php echo $link; ?>">QUEM SOMOS</a>
+            </button>
             <div class="social">
               <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
                 <span></span>
@@ -37,13 +60,14 @@
                 <span></span>
               </a>
             </div>
+            
           </div>
           <div class="col-md-4">
             <div class="float-right">
               <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
-              <div class="button-doe">
+              <button class="button-doe">
                 <a href="#donation">APOIE</a>
-              </div>
+              </button>
             </div>
           </div>
         </div>
