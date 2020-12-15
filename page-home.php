@@ -133,11 +133,18 @@ $pageID = get_the_ID();
             'post_type'      => 'post',
             'post_status'    => 'publish',
             'posts_per_page' => 4,
+            'order' => 'DESC',
           ) );
-          
-          foreach ( $posts_last->posts as $post ) {
-            $title = get_the_title( $post->ID );
-            $link = get_permalink( $post->ID );
+      
+          $mylimit = 20 * 86400; //days * seconds per day
+
+          while ($posts_last->have_posts()) : $posts_last->the_post();
+
+              $title = get_the_title( $post->ID );
+              $link = get_permalink( $post->ID );
+              $post_age = date('U') - get_post_time('U');
+
+              if ($post_age > $mylimit) { 
           ?>
 
             <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
@@ -145,8 +152,10 @@ $pageID = get_the_ID();
             </a>
             <div class="line-gradient more-home"></div>
 
-          <?php } ?>
-
+          <?php 
+            }
+            endwhile;
+          ?>
         </div>
 
         <?php
@@ -224,24 +233,46 @@ $pageID = get_the_ID();
         
         foreach ( $posts_midias->posts as $post ) {
           $thumbvideo = get_the_post_thumbnail_url( $post->ID, 'full');
-          $link = get_permalink( $post_formato_2->ID );
+          $link = get_permalink( $post->ID );
         ?>
 
           <div class="carousel-cell slide-video">
-            <!-- <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"> -->
-            <!-- </div> -->
             <img src="<?php echo $thumbvideo ?>" alt="<?php echo get_the_title( $post->ID ) ?>">
-            <h3><?php echo get_the_title( $post->ID ); ?></h3>
-            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID ) ?>">
-              <button class="player-video"></button>
+            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID )?>">
+              <h3><?php echo get_the_title( $post->ID ); ?></h3>
             </a>
-
+            <button type="button" class="player-video" data-toggle="modal" data-target="#<?php echo $post->ID ?>Modal"></button>
           </div>
-        
+
         <?php } ?>
 
       </div>
     </div>
+
+    <?php foreach ( $posts_midias->posts as $post ) { 
+      $video = get_field('video_multimidia');
+    ?>
+      <!-- Modal -->
+      <div class="modal fade" id="<?php echo $post->ID ?>Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <?php echo $video ?>
+            </div>
+            <div class="modal-footer">
+              <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID )?>">
+                <h3><?php echo get_the_title( $post->ID ); ?></h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
     <div class="col-10 offset-1 col-lg-10 offset-lg-1">
       <div class="line-gradient"></div>
@@ -251,7 +282,6 @@ $pageID = get_the_ID();
 </section>
 
 <?php componente_newsletter() ?>
-
 
 <?php /* componente_doacao() */ ?>
 

@@ -170,7 +170,7 @@
         height: 40px;
         float: right;
         margin-right: -30px;
-        margin-top: -16px;
+        margin-top: 9px;
         @media screen and (max-width: 1199px) {
             -webkit-mask: url(../images/highlight-right-sm.svg) no-repeat center;
             mask: url(../images/highlight-right-sm.svg) no-repeat center;
@@ -331,5 +331,45 @@
 a {
     h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
         opacity: 0.8;
+    }
+}
+
+// modal
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.modal-dialog {
+    max-width: 700px;
+    iframe {
+        width: 664px;
+        height: 373.50px;
+        @media screen and (max-width: 1199px) {
+            width: 325px;
+            height: 182.81px;
+        }
+    }
+}
+
+.modal-content {
+    background-color: transparent;
+    border: 0px;
+}
+
+.modal-header {
+    border: 0px;
+}
+
+.modal-footer {
+    border: 0px;
+    justify-content: flex-start;
+}
+
+button.close {
+    span {
+        font-size: 36px;
+        font-weight: 600;
+        color: white;
     }
 }

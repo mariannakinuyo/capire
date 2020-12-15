@@ -25,14 +25,15 @@ $posts_tag = new WP_Query(array(
             <?php } ?>
         </div>
     </div>
+    <div class="row">
 
     <?php foreach ($posts_tag->posts as $i => $post) {
         $thumb = get_the_post_thumbnail_url( $post->ID, 'full');
         $categoria = get_the_category( $post->ID )[0]->name;
         $linha_fina = get_field('linha_fina', $post->ID);
     ?>
-    <div class="row">
-        <div class="col-lg-4">
+    
+        <div class="col-lg-4 col-12">
             <a href="<?php the_permalink() ?>">
             <div class="box-cats-home">
                 

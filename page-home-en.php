@@ -135,9 +135,14 @@ $pageID = get_the_ID();
             'posts_per_page' => 4,
           ) );
           
-          foreach ( $posts_last->posts as $post ) {
+          $mylimit = 20 * 86400; //days * seconds per day
+
+          while ($posts_last->have_posts()) : $posts_last->the_post();
             $title = get_the_title( $post->ID );
             $link = get_permalink( $post->ID );
+            $post_age = date('U') - get_post_time('U');
+
+            if ($post_age > $mylimit) {
           ?>
 
             <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
@@ -145,7 +150,10 @@ $pageID = get_the_ID();
             </a>
             <div class="line-gradient more-home"></div>
 
-          <?php } ?>
+          <?php
+            } 
+            endwhile;
+          ?>
 
         </div>
 

@@ -59,14 +59,14 @@
     transition: height 0.5s;
     height: 66px;
 
-    @media screen and (max-width: 1999px) {
+    @media screen and (max-width: 1199px) {
       height: 40px;
       margin-top: 10px;
       margin-left: 15px;
     }
   }
 
-  @media screen and (max-width: 1999px) {
+  @media screen and (max-width: 1199px) {
     height: 40px;
   }
 }
@@ -172,6 +172,10 @@ header {
   li {
     display: inline-block;
     margin-left: 5px;
+  }
+  a {
+    font-size: 12px;
+    color: var(--purple);
   }
 }
 

@@ -40,7 +40,7 @@ $posts_categoria = new WP_Query(array(
             }
         ?>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-12">
                 <a href="<?php the_permalink() ?>">
                 <div class="box-cats-home">
                     

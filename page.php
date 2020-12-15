@@ -11,4 +11,6 @@
     </div>
 </article>
 
+<?php componente_newsletter() ?>
+
 <?php get_footer(); ?>

@@ -40,6 +40,7 @@ function register_my_menu() {
 		'menu-tags'  => 'Menu tags',
 		'menu-primario'  => 'Menu primário',
 		'footer'  => 'Footer',
+		'language'  => 'language',
 
 		) );
 		// 'menu-primario' => __( 'Menu primário' ),

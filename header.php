@@ -42,7 +42,7 @@ if ( $lang === 'en-US' ) {
     <div class="row b-bottom">
       <div class="container social-lang">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-5">
             <button class="botao-secundario">
               <a href="<?php echo $link; ?>">QUEM SOMOS</a>
             </button>
@@ -62,7 +62,7 @@ if ( $lang === 'en-US' ) {
             </div>
             
           </div>
-          <div class="col-md-4">
+          <div class="col-md-7">
             <div class="float-right">
               <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
               <button class="button-doe">

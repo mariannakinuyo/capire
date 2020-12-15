@@ -331,14 +331,14 @@ ul {
   transition: height 0.5s;
   height: 66px;
 }
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
   .logo-menu img {
     height: 40px;
     margin-top: 10px;
     margin-left: 15px;
   }
 }
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
   .logo-menu {
     height: 40px;
   }
@@ -438,6 +438,10 @@ header a:hover {
 .menu-language li {
   display: inline-block;
   margin-left: 5px;
+}
+.menu-language a {
+  font-size: 12px;
+  color: var(--purple);
 }
 
 header ::marker {
@@ -1136,7 +1140,7 @@ article .author p {
   height: 40px;
   float: right;
   margin-right: -30px;
-  margin-top: -16px;
+  margin-top: 9px;
 }
 @media screen and (max-width: 1199px) {
   .highlight::after {
@@ -1270,6 +1274,45 @@ article .author p {
 
 a h1:hover, a h2:hover, a h3:hover, a h4:hover, a h5:hover {
   opacity: 0.8;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.modal-dialog {
+  max-width: 700px;
+}
+.modal-dialog iframe {
+  width: 664px;
+  height: 373.5px;
+}
+@media screen and (max-width: 1199px) {
+  .modal-dialog iframe {
+    width: 325px;
+    height: 182.81px;
+  }
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 0px;
+}
+
+.modal-header {
+  border: 0px;
+}
+
+.modal-footer {
+  border: 0px;
+  justify-content: flex-start;
+}
+
+button.close span {
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
