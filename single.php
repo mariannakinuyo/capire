@@ -10,6 +10,7 @@
     $categoria = get_the_category( $postID )[0]->name;
     $tags = get_the_tags();
     $link = get_permalink( $postID );
+    $caption = the_post_thumbnail_caption( $postID );
 ?>
 
 <div class="container p-top">
@@ -22,20 +23,24 @@
                     <span class="date float-right"><?php echo get_the_date('d/m/Y') ?></span>
                 </p>
                 
-                <div class="tags-article">
-                    <?php if ( $tags ) {
-                        foreach( $tags as $tag ) { ?>
-
-                        <a href="<?php echo get_tag_link($tag); ?>"><p class="small"><?php echo $tag->name ?></p></a>
-
-                    <?php }
-                    } ?>
-                </div>
+                <?php if ( $tags ) {
+                    foreach( $tags as $tag ) { ?>
+                        <div class="tags-article">
+                            <a href="<?php echo get_tag_link($tag); ?>">
+                                <p class="small"><?php echo $tag->name ?></p>
+                            </a>
+                        </div>
+                <?php }
+                } ?>
                 
             </div>
 
             <div class="single-thumb">
-                <?php echo $thumb ?>
+                <div class="img-leg">
+                    <?php echo $thumb ?>
+                    <p class="small"><?php the_post_thumbnail_caption(  ); ?></p>
+                </div>
+                
             </div>
 
         </div>

@@ -80,3 +80,6 @@ function check_for_category_single_template( $t )
   } 
   return $t;
 }
+
+
+add_filter( 'image_send_to_editor', 'image_add_caption', 20, 8 );

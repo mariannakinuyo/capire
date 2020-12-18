@@ -1,5 +1,4 @@
 .chapeu {
-  margin-top: 40px;
   margin-bottom: 24px;
 
   .name-categoria {
@@ -35,6 +34,7 @@ img {
   width: fit-content;
   padding: 0px 10px 3px 5px;
   color: white;
+  display: inline-block;
 
   &::hover {
     opacity: 0.7;
@@ -87,12 +87,11 @@ article {
   }
 
   blockquote {
-    margin-left: 70px;
     margin-top: 40px;
-    margin-bottom: 22px;
-
-    cite {
-      position: relative;
+    margin-bottom: 32px;
+    position: relative;
+    width: 85%;
+    position: relative;
       &:before {
         content:" “ ";
         display: block;
@@ -114,7 +113,18 @@ article {
         bottom: -49px;
         right: -23px;
       }
-    }
+
+      p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      span {
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 26px;
+      }
   }
 
   .author {
@@ -123,6 +133,15 @@ article {
       margin-bottom: 0px;
     }
   }
+}
+
+
+blockquote {
+  margin: 40px auto 22px;
+}
+
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
+  font-size: 18px !important;
 }
 
 .social-vert .social {
@@ -158,5 +177,13 @@ article {
       top: auto;
       right: auto;
     }
+  }
+}
+
+.img-leg {
+  width: fit-content;
+  margin: auto;
+  .small {
+    text-align: left;
   }
 }

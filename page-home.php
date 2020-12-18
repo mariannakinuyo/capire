@@ -6,8 +6,8 @@ $pageID = get_the_ID();
 
 <section class="container p-top">
   <div class="row">
-    <div class="col-lg-6 offset-lg-3 my-5">
-        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
+    <div class="col-12 text-center">
+      <img class="img-highlight" src="<?php  echo get_field('imagem_do_topo', $pageID) ?>" alt="Image highlight">
     </div>
   </div>
 </section>
@@ -50,7 +50,7 @@ $pageID = get_the_ID();
                       <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                     </p>
                     <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
-                      <h1><?php echo $title ?></h1>
+                      <h2><?php echo $title ?></h2>
                       <p class="subtitle"><?php echo $linha_fina ?></p>
                       <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>"><p class="d-block d-lg-none text-right small"><strong>Leia mais</strong></p></a>
                     </a>
@@ -282,7 +282,7 @@ $pageID = get_the_ID();
 </section>
 
 <?php componente_newsletter() ?>
-
+<!-- [newsletter_form] -->
 <?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

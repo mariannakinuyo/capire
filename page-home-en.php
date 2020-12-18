@@ -6,8 +6,8 @@ $pageID = get_the_ID();
 
 <section class="container p-top">
   <div class="row">
-    <div class="col-lg-6 offset-lg-3 my-5">
-        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo_en', $pageID) ?></strong></h3>
+    <div class="col-12 text-center">
+        <img class="img-highlight" src="<?php  echo get_field('imagem_do_topo_en', $pageID) ?>" alt="Image highlight">
     </div>
   </div>
 </section>

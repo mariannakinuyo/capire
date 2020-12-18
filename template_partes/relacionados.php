@@ -56,9 +56,9 @@ if ( $lang === 'en-US' ) {
                         <?php echo $categoria->name ?>
                         <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                     </p>
-                    <h5><?php echo get_the_title( $post->ID ); ?></h5>
+                    <a href="<?php echo $link; ?>"><h5><?php echo get_the_title( $post->ID ); ?></h5></a>
                 </div>
-                <p class="linha-fina"><?php echo $linha_fina; ?></p>
+                <a href="<?php echo $link; ?>"><p class="linha-fina"><?php echo $linha_fina; ?></p></a>
             </div>
 
         <?php } ?>

@@ -22,16 +22,28 @@
 $lang = get_bloginfo("language");
 
 if ( $lang === 'en-US' ) {
-  $link = "http://capiremov.org/en/about-us/";
+  $link = "https://capiremov.org/en/about-us/";
+  $page = get_page_by_path( 'home-en' );
+  $quem = get_field('btn_quem_somos_en', $page->ID);
+  $apoie = get_field('btn_apoie_en', $page->ID);
 
 } elseif ( $lang === 'es' ) {
-  $link = "http://capiremov.org/es/quienes-somos/";
+  $link = "https://capiremov.org/es/quienes-somos/";
+  $page = get_page_by_path( 'home-es' );
+  $quem = get_field('btn_quem_somos_es', $page->ID);
+  $apoie = get_field('btn_apoie_es', $page->ID);
 
 } elseif ( $lang === 'fr-FR' ) {
-  $link = "http://capiremov.org/fr/a-propos-de-nous/";
+  $link = "https://capiremov.org/fr/a-propos-de-nous/";
+  $page = get_page_by_path( 'home-fr' );
+  $quem = get_field('btn_quem_somos_fr', $page->ID);
+  $apoie = get_field('btn_apoie_fr', $page->ID);
 
 } elseif ( $lang === 'pt-BR' ) {
-  $link = "http://capiremov.org/quem-somos/";
+  $link = "https://capiremov.org/quem-somos/";
+  $page = get_page_by_path( 'home' );
+  $quem = get_field('btn_quem_somos', $page->ID);
+  $apoie = get_field('btn_apoie', $page->ID);
 
 }
 
@@ -44,7 +56,7 @@ if ( $lang === 'en-US' ) {
         <div class="row">
           <div class="col-md-5">
             <button class="botao-secundario">
-              <a href="<?php echo $link; ?>">QUEM SOMOS</a>
+              <a href="<?php echo $link; ?>"><?php echo $quem; ?></a>
             </button>
             <div class="social">
               <a href="https://facebook.com/capiremov" class="facebook" target="_blank">
@@ -60,13 +72,12 @@ if ( $lang === 'en-US' ) {
                 <span></span>
               </a>
             </div>
-            
           </div>
           <div class="col-md-7">
             <div class="float-right">
               <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
               <button class="button-doe">
-                <a href="#donation">APOIE</a>
+                <a href="#donation"><?php echo $apoie; ?></a>
               </button>
             </div>
           </div>

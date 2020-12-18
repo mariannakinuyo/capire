@@ -107,10 +107,10 @@ ul {
 }
 
 .p-top {
-  padding-top: 216px;
+  padding-top: 260px;
 
   @media screen and (max-width: 989px) {
-    padding-top: 63px;
+    padding-top: 90px;
   }
 }
 
@@ -225,3 +225,8 @@ ul {
   }
 }
 
+.wp-block-image figcaption {
+  margin-top: 0px !important;
+  font-size: 14px;
+  margin-bottom: 1em;
+}

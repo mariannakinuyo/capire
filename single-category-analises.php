@@ -22,15 +22,15 @@
                     <span class="date float-right"><?php echo get_the_date('d/m/Y') ?></span>
                 </p>
                 
-                <div class="tags-article">
-                    <?php if ( $tags ) {
-                        foreach( $tags as $tag ) { ?>
-
-                        <a href="<?php echo get_tag_link($tag); ?>"><p class="small"><?php echo $tag->name ?></p></a>
-
-                    <?php }
-                    } ?>
-                </div>
+                <?php if ( $tags ) {
+                    foreach( $tags as $tag ) { ?>
+                        <div class="tags-article">
+                            <a href="<?php echo get_tag_link($tag); ?>">
+                                <p class="small"><?php echo $tag->name ?></p>
+                            </a>
+                        </div>
+                <?php }
+                } ?>
                 
             </div>
 

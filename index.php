@@ -6,8 +6,8 @@ $pageID = get_the_ID();
 
 <section class="container p-top">
   <div class="row">
-    <div class="col-lg-6 offset-lg-3 my-5">
-        <h3 class="lato highlight text-center"><strong><?php echo get_field('texto_do_topo', $pageID) ?></strong></h3>
+    <div class="col-12 text-center">
+      <img class="img-highlight" src="<?php  echo get_field('imagem_do_topo', $pageID) ?>" alt="Image highlight">
     </div>
   </div>
 </section>
@@ -50,7 +50,7 @@ $pageID = get_the_ID();
                       <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                     </p>
                     <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
-                      <h1><?php echo $title ?></h1>
+                      <h2><?php echo $title ?></h2>
                       <p class="subtitle"><?php echo $linha_fina ?></p>
                       <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>"><p class="d-block d-lg-none text-right small"><strong>Leia mais</strong></p></a>
                     </a>
@@ -133,11 +133,18 @@ $pageID = get_the_ID();
             'post_type'      => 'post',
             'post_status'    => 'publish',
             'posts_per_page' => 4,
+            'order' => 'DESC',
           ) );
-          
-          foreach ( $posts_last->posts as $post ) {
-            $title = get_the_title( $post->ID );
-            $link = get_permalink( $post->ID );
+      
+          $mylimit = 20 * 86400; //days * seconds per day
+
+          while ($posts_last->have_posts()) : $posts_last->the_post();
+
+              $title = get_the_title( $post->ID );
+              $link = get_permalink( $post->ID );
+              $post_age = date('U') - get_post_time('U');
+
+              if ($post_age > $mylimit) { 
           ?>
 
             <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
@@ -145,8 +152,10 @@ $pageID = get_the_ID();
             </a>
             <div class="line-gradient more-home"></div>
 
-          <?php } ?>
-
+          <?php 
+            }
+            endwhile;
+          ?>
         </div>
 
         <?php
@@ -224,24 +233,46 @@ $pageID = get_the_ID();
         
         foreach ( $posts_midias->posts as $post ) {
           $thumbvideo = get_the_post_thumbnail_url( $post->ID, 'full');
-          $link = get_permalink( $post_formato_2->ID );
+          $link = get_permalink( $post->ID );
         ?>
 
           <div class="carousel-cell slide-video">
-            <!-- <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"> -->
-            <!-- </div> -->
             <img src="<?php echo $thumbvideo ?>" alt="<?php echo get_the_title( $post->ID ) ?>">
-            <h3><?php echo get_the_title( $post->ID ); ?></h3>
-            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID ) ?>">
-              <button class="player-video"></button>
+            <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID )?>">
+              <h3><?php echo get_the_title( $post->ID ); ?></h3>
             </a>
-
+            <button type="button" class="player-video" data-toggle="modal" data-target="#<?php echo $post->ID ?>Modal"></button>
           </div>
-        
+
         <?php } ?>
 
       </div>
     </div>
+
+    <?php foreach ( $posts_midias->posts as $post ) { 
+      $video = get_field('video_multimidia');
+    ?>
+      <!-- Modal -->
+      <div class="modal fade" id="<?php echo $post->ID ?>Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <?php echo $video ?>
+            </div>
+            <div class="modal-footer">
+              <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID )?>">
+                <h3><?php echo get_the_title( $post->ID ); ?></h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
     <div class="col-10 offset-1 col-lg-10 offset-lg-1">
       <div class="line-gradient"></div>
@@ -250,40 +281,8 @@ $pageID = get_the_ID();
   </div>
 </section>
 
-
-<?php
-
-    $titulo_news = get_field('titulo_newsletter', $pageID);
-    $texto_news = get_field('texto_newsletter', $pageID);
-
-  // if ( $url === "http://capiremov.org" ) {
-  //   $titulo_news = get_field('titulo_newsletter', $pageID);
-  //   $texto_news = get_field('texto_newsletter', $pageID);
-  // }
-
-?>
-
-<section class="container">
-  <div class="wrap-newsletter">
-    <div class="row">
-      <div class="offset-md-2 col-md-4 col-12">
-        <div class="element-left">
-          <h2 class="purple"><?php echo $titulo_news ?></h2>
-          <p><?php echo $texto_news ?></p>
-        </div>
-      </div>
-      <div class="col-md-4 col-12">
-        <div class="element-right">
-          <input type="text" placeholder="Nome">
-          <input type="text" placeholder="E-mail">
-          <button class="float-right">Assinar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
+<?php componente_newsletter() ?>
+<!-- [newsletter_form] -->
 <?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>
