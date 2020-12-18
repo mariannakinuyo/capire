@@ -1,8 +1,7 @@
-<?php get_header(); 
-
-$pageID = get_the_ID();
+<?php 
+  get_header(); 
+  $pageID = get_the_ID();
 ?>
-
 
 <section class="container p-top">
   <div class="row">
@@ -282,7 +281,7 @@ $pageID = get_the_ID();
 </section>
 
 <?php componente_newsletter() ?>
-<!-- [newsletter_form] -->
+
 <?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

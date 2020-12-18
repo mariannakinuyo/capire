@@ -603,6 +603,22 @@ ul.menu-menu-primario-container {
 .mobile-menu ul.sub-menu {
   display: none;
 }
+.mobile-menu .menu-language li {
+  display: block;
+  font-size: 16px;
+  margin-left: 0px;
+  padding: 0px;
+  line-height: 18px;
+}
+.mobile-menu .menu-language a {
+  font-size: 16px;
+  color: black;
+}
+
+#menu-mobile .line-gradient {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 .botao-secundario {
   padding: 2px 13px;
@@ -729,6 +745,37 @@ footer .menu-footer li a {
   .wrap-newsletter .element-right::before {
     display: none;
     background-image: url(../images/element-right-sm.png);
+  }
+}
+
+.element-right input.tnp-name, .element-right input.tnp-email {
+  background: none !important;
+  border-bottom: 1px solid var(--purple) !important;
+  width: 85% !important;
+}
+@media screen and (max-width: 1199px) {
+  .element-right input.tnp-name, .element-right input.tnp-email {
+    width: 100% !important;
+  }
+}
+.element-right form {
+  margin-top: -30px;
+}
+.element-right .tnp-submit {
+  border: 0px;
+  border-radius: 3px;
+  background-color: var(--purple) !important;
+  color: white;
+  padding: 4px 13px;
+  text-transform: uppercase;
+  font-size: 14px;
+  float: right;
+  margin-right: 52px !important;
+}
+@media screen and (max-width: 1199px) {
+  .element-right .tnp-submit {
+    width: auto !important;
+    margin-right: 0px !important;
   }
 }
 
@@ -1016,8 +1063,10 @@ blockquote {
   background-size: cover;
 }
 
-.img-highlight {
-  margin-top: 50px;
+@media screen and (max-width: 1199px) {
+  .img-highlight {
+    margin-bottom: 20px;
+  }
 }
 
 .img-hero-slide {
@@ -1067,7 +1116,7 @@ blockquote {
 }
 @media screen and (max-width: 1199px) {
   .hero .carousel.hero-slide .carousel-cell {
-    height: 500px;
+    height: 630px;
     background-color: white;
   }
 }

@@ -333,23 +333,28 @@ ul.menu-menu-primario-container {
   ul.sub-menu {
     display: none;
   }
+
+  .menu-language {
+    li {
+      display: block;
+      font-size: 16px;
+      margin-left: 0px;
+      padding: 0px;
+      line-height: 18px;
+    }
+    a {
+      font-size: 16px;
+      color: black;
+    }
+  }
 }
 
-// .botao-secundario {
-//   border: 1px solid var(--purple);
-//   color: var(--purple);
-//   display: inline;
-//   padding: 2px 13px;
-//   font-size: 12px;
-//   border-radius: 3px;
-//   background-color: white;
-//   margin-bottom: 5px;
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-// }
-
+#menu-mobile {
+  .line-gradient {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 
 .botao-secundario {
   padding: 2px 13px;

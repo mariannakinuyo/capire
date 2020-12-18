@@ -40,13 +40,23 @@
       </div>
       <div class="col-md-4 col-12">
         <div class="element-right">
-          <input type="text" placeholder="Nome">
-          <input type="text" placeholder="E-mail">
-          <button class="float-right"><?php echo $botao_news ?></button>
+          <?php
+            if ( $lang === 'en-US' ) {
+              echo do_shortcode( '[newsletter_form lists="2" form="2"]' );
+            } elseif ( $lang === 'es' ) {
+              echo do_shortcode( '[newsletter_form lists="3" form="3"]' );
+            } elseif ( $lang === 'fr-FR' ) {
+              echo do_shortcode( '[newsletter_form lists="4" form="4"]' );
+            } elseif ( $lang === 'pt-BR' ) {
+              echo do_shortcode( '[newsletter_form lists="1" form="1"]' );
+            }
+          ?>
         </div>
       </div>
     </div>
   </div>
+
+
 
 </section>
 
