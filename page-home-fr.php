@@ -50,7 +50,7 @@ $pageID = get_the_ID();
                       <span class="float-right"><?php echo get_the_date('d/m/Y') ?></span>
                     </p>
                     <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
-                      <h1><?php echo $title ?></h1>
+                      <h2><?php echo $title ?></h2>
                       <p class="subtitle"><?php echo $linha_fina ?></p>
                       <a href="<?php echo $link ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>"><p class="d-block d-lg-none text-right small"><strong>Leia mais</strong></p></a>
                     </a>
@@ -220,7 +220,7 @@ $pageID = get_the_ID();
         $posts_midias = new WP_Query( array(
           'post_type'      => 'post',
           'post_status'    => 'publish',
-          'posts_per_page' => 4,
+          'posts_per_page' => 5,
           'tax_query'      => array(
             array(
               'taxonomy' => 'category',
@@ -236,20 +236,43 @@ $pageID = get_the_ID();
         ?>
 
           <div class="carousel-cell slide-video">
-            <!-- <div class="bg-img img-video-home" style="background-image: url( <?php echo $thumbvideo ?> )"> -->
-            <!-- </div> -->
             <img src="<?php echo $thumbvideo ?>" alt="<?php echo get_the_title( $post->ID ) ?>">
-            <h3><?php echo get_the_title( $post->ID ); ?></h3>
             <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID ) ?>">
-              <button class="player-video"></button>
+              <h3><?php echo get_the_title( $post->ID ); ?></h3>
             </a>
-
+            <button type="button" class="player-video" data-toggle="modal" data-target="#<?php echo $post->ID ?>Modal"></button>
           </div>
         
         <?php } ?>
 
       </div>
     </div>
+
+    <?php foreach ( $posts_midias->posts as $post ) { 
+      $video = get_field('video_multimidia');
+    ?>
+      <!-- Modal -->
+      <div class="modal fade" id="<?php echo $post->ID ?>Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <?php echo $video ?>
+            </div>
+            <div class="modal-footer">
+              <a href="<?php echo $link ?>" alt="<?php echo get_the_title( $post->ID ) ?>" title="<?php echo get_the_title( $post->ID )?>">
+                <h3><?php echo get_the_title( $post->ID ); ?></h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+
 
     <div class="col-10 offset-1 col-lg-10 offset-lg-1">
       <div class="line-gradient"></div>
@@ -261,6 +284,6 @@ $pageID = get_the_ID();
 
 <?php componente_newsletter() ?>
 
-<?php /* componente_doacao() */ ?>
+<?php componente_doacao() ?>
 
 <?php get_footer(); ?>

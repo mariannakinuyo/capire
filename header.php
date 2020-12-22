@@ -86,7 +86,7 @@ if ( $lang === 'en-US' ) {
             <div class="float-right">
               <?php  wp_nav_menu( array( 'menu' => 'language', 'container' => FALSE, 'menu_class' => 'menu-language', 'menu_id' => false ) ); ?>
               <button class="button-doe">
-                <a href="#donation"><?php echo $apoie; ?></a>
+                <a href="<?php echo home_url() ?>/#donation"><?php echo $apoie; ?></a>
               </button>
             </div>
           </div>

@@ -7,7 +7,7 @@ include dirname(__FILE__) . '/template_partes/newsletter.php';
 include dirname(__FILE__) . '/template_partes/regioes.php';
 include dirname(__FILE__) . '/template_partes/compartilhar.php';
 include dirname(__FILE__) . '/template_partes/relacionados.php';
-// include dirname(__FILE__) . '/template_partes/doacao.php';
+include dirname(__FILE__) . '/template_partes/doacao.php';
 
 // Registra as sidebars
 function tutsup_sidebars()	{

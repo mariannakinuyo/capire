@@ -41,7 +41,7 @@
               array(
                   'taxonomy' => 'regioes',
                   'field' => 'slug',
-                  'terms' => ['africa', 'americas', 'asia-oceania', 'europa', 'mundo-arabe'],
+                  'terms' => ['africa', 'americas', 'asia-oceania', 'europa', 'mundo-arabe', 'internacional'],
               )
           )
         ) );
@@ -50,7 +50,7 @@
           $regs = get_the_terms( $post->ID, 'regioes' )[0];
           $categoria = get_the_terms( $post->ID, 'category' )[0];
           $link = get_permalink( $post->ID );
-          $thumb = get_the_post_thumbnail_url( $post->ID, 'full');
+          $thumb = get_the_post_thumbnail_url( $post->ID, 'medium');
         ?>
           <div class="carousel-cell slide-regiao">
             <div class="col-reg">

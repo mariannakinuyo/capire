@@ -6,21 +6,25 @@ if ( $lang === 'en-US' ) {
   $page = get_page_by_path( 'home-en' );
   $texto_cc = get_field('texto_cc_en', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_en', $page->ID);
+  $contato = "Contact";
 
 } elseif ( $lang === 'es' ) {
   $page = get_page_by_path( 'home-es' );
   $texto_cc = get_field('texto_cc_es', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_es', $page->ID);
+  $contato = "Contacto";
 
 } elseif ( $lang === 'fr-FR' ) {
   $page = get_page_by_path( 'home-fr' );
   $texto_cc = get_field('texto_cc_fr', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_fr', $page->ID);
+  $contato = "Contact";
 
 } elseif ( $lang === 'pt-BR' ) {
   $page = get_page_by_path( 'home' );
   $texto_cc = get_field('texto_cc', $page->ID);
   $texto_redes = get_field('texto_redes_sociais', $page->ID);
+  $contato = "Contato";
 }
 
 ?>
@@ -42,6 +46,7 @@ if ( $lang === 'en-US' ) {
                 <div class="col-12 col-lg-2">
                     <p class="small">CAPIRE</p>
                     <?php  wp_nav_menu( array( 'menu' => 'footer', 'container' => FALSE, 'menu_class' => 'menu-footer', 'menu_id' => false ) ); ?>
+                    <a href="mailto:info@capiremov.com.br" class="contato"><?php echo $contato ?></a>
                 </div>
                 <div class="col-12 col-lg-2">
                     <p class="small"><?php echo $texto_redes ?></p>

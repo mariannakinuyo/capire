@@ -28,6 +28,8 @@ footer {
   }
 
   .menu-footer {
+    margin-bottom: 0px;
+
     li a {
       color: #fff;
       font-family: var(--font-oswald);
@@ -40,4 +42,10 @@ footer {
       margin-bottom: 0px;
     }
   }
+}
+
+.contato {
+  color: #fff;
+  font-family: var(--font-oswald);
+  font-size: 16px;
 }
