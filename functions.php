@@ -7,7 +7,7 @@ include dirname(__FILE__) . '/template_partes/newsletter.php';
 include dirname(__FILE__) . '/template_partes/regioes.php';
 include dirname(__FILE__) . '/template_partes/compartilhar.php';
 include dirname(__FILE__) . '/template_partes/relacionados.php';
-include dirname(__FILE__) . '/template_partes/doacao.php';
+// include dirname(__FILE__) . '/template_partes/doacao.php';
 
 // Registra as sidebars
 function tutsup_sidebars()	{
@@ -81,5 +81,5 @@ function check_for_category_single_template( $t )
   return $t;
 }
 
-
-add_filter( 'image_send_to_editor', 'image_add_caption', 20, 8 );
+// legenda
+// add_filter( 'image_send_to_editor', 'image_add_caption', 20, 8 );

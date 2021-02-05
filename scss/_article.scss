@@ -144,6 +144,11 @@ blockquote {
   font-size: 18px !important;
 }
 
+.wp-block-pullquote p {
+  font-size: 28px;
+  line-height: 34px !important;
+}
+
 .social-vert .social {
   a {
     display: block;
@@ -155,18 +160,28 @@ blockquote {
   }
 }
 
-.social-right {
-  float: right;
+.social-center {
+  text-align: center;
+  p {
+    font-size: 14px;
+    color: var(--purple);
+    font-weight: 500;
+    line-height: 18px;
+  }
 }
 
 .wrap-article {
   margin-top: 36px;
-  margin-bottom: 110px;
+  margin-bottom: 130px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 100px;
+  }
 }
 
 .infos-article {
   position: relative;
-  .social-right {
+  margin-top: 42px;
+  .social-center {
     position: absolute;
     top: -6px;
     right: 0px;

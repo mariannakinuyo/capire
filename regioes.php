@@ -22,7 +22,7 @@ $posts_taxonomy = new WP_Query(array(
 
 <div class="container p-top categories cat-regions">
     <div class="row">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7 description-cat">
             <h4 class="name-categoria title"><?php echo $taxonomy->name ?></h4>
 
             <?php if ( term_description() ) { ?>

@@ -377,3 +377,32 @@ ul.menu-menu-primario-container {
     
   }
 }
+
+.button-search {
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  @media screen and (max-width: 1199px) {
+    
+  }
+}
+
+.search-form {
+  margin-bottom: 25px;
+  display: none;
+  .search-input {
+    border: 0px;
+    width: 350px;
+    border-bottom: 1px solid var(--purple);
+  }
+  .search-button {
+    background-color: black;
+    border: 0px;
+    -webkit-mask: url(../images/search.svg) no-repeat center;
+    mask: url(../images/search.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}

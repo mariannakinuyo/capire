@@ -42,15 +42,16 @@ if ( $lang === 'en-US' ) {
                 'hide_empty' => true,
                 'posts_per_page' => 3,
                 'cat' => $categoria->term_id,
+                'post__not_in' => array($postID),
             ) );
 
             foreach ( $posts_rel->posts as $i => $post) {
                 $link = get_permalink( $post->ID );
-                $linha_fina = get_field('linha_fina');
+                $linha_fina = get_field('linha_fina', $post->ID );
                 $categoria = get_the_category( $post->ID )[0];
         ?>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 wrap-card">
                 <div class="card-relacionados">
                     <p class="name-categoria">
                         <?php echo $categoria->name ?>

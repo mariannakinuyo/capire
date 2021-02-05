@@ -1,5 +1,5 @@
 
-<?php  function componente_doacao() { 
+<?php /* function componente_doacao() { 
 $lang = get_bloginfo("language");
 
 if ( $lang === 'en-US' ) {
@@ -36,4 +36,4 @@ if ( $lang === 'en-US' ) {
 </section>
 
 <?php
-} 
+} */

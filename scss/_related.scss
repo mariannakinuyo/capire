@@ -22,3 +22,9 @@
     border-left: 11px solid var(--red);
     padding-left: 20px;
 }
+
+.wrap-card {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 36px;
+    }
+}

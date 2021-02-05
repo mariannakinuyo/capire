@@ -17,19 +17,24 @@ $pageID = get_the_ID();
     <div class="col-lg-10 offset-lg-1 col-12">
 
       <?php
-        $rows = get_field('carousel_principal_fr', $pageID);
-        if( $rows ) {
+        // $rows = get_field('carousel_principal_fr', $pageID);
+        $posts_ultimos = new WP_Query( array(
+          'post_type'      => 'post',
+          'post_status'    => 'publish',
+          'order' => 'DESC',
+          'posts_per_page' => 4,
+        ) );
+        
+        if( $posts_ultimos ) {
       ?>
         <div class="carousel hero-slide" data-flickity='{ "autoPlay": true }'>
-        <!-- data-flickity='{ "autoPlay": true }' -->
         <?php
-          foreach( $rows as $row ) {
-            $post_principal = $row['post_carousel_principal'];
-            $title = get_the_title( $post_principal->ID );
-            $link = get_permalink( $post_principal->ID );
-            $thumb = get_the_post_thumbnail_url( $post_principal->ID, 'full');
-            $categoria = get_the_category( $post_principal->ID )[0]->name;
-            $linha_fina = get_field('linha_fina', $post_principal->ID);
+          foreach( $posts_ultimos->posts as $post ) {
+            $title = get_the_title( $post->ID );
+            $link = get_permalink( $post->ID );
+            $thumb = get_the_post_thumbnail_url( $post->ID, 'full');
+            $categoria = get_the_category( $post->ID )[0]->name;
+            $linha_fina = get_field('linha_fina', $post->ID);
             $category_id = get_cat_ID( $categoria );
             $category_link = get_category_link( $category_id );
         ?>
@@ -135,7 +140,7 @@ $pageID = get_the_ID();
             'posts_per_page' => 4,
           ) );
           
-          $mylimit = 20 * 86400; //days * seconds per day
+          $mylimit = 0 * 86400; //days * seconds per day
 
           while ($posts_last->have_posts()) : $posts_last->the_post();
             $title = get_the_title( $post->ID );
@@ -232,7 +237,7 @@ $pageID = get_the_ID();
         
         foreach ( $posts_midias->posts as $post ) {
           $thumbvideo = get_the_post_thumbnail_url( $post->ID, 'full');
-          $link = get_permalink( $post_formato_2->ID );
+          $link = get_permalink( $post->ID );
         ?>
 
           <div class="carousel-cell slide-video">
@@ -284,6 +289,6 @@ $pageID = get_the_ID();
 
 <?php componente_newsletter() ?>
 
-<?php componente_doacao() ?>
+<?php /* componente_doacao() */ ?>
 
 <?php get_footer(); ?>

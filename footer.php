@@ -7,24 +7,29 @@ if ( $lang === 'en-US' ) {
   $texto_cc = get_field('texto_cc_en', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_en', $page->ID);
   $contato = "Contact";
+  $telegram = "http://t.me/capiremov_en";
 
 } elseif ( $lang === 'es' ) {
   $page = get_page_by_path( 'home-es' );
   $texto_cc = get_field('texto_cc_es', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_es', $page->ID);
   $contato = "Contacto";
+  $telegram = "http://t.me/capiremov_es";
 
 } elseif ( $lang === 'fr-FR' ) {
   $page = get_page_by_path( 'home-fr' );
   $texto_cc = get_field('texto_cc_fr', $page->ID);
   $texto_redes = get_field('texto_redes_sociais_fr', $page->ID);
   $contato = "Contact";
+  $telegram = "http://t.me/capiremov_fr";
 
 } elseif ( $lang === 'pt-BR' ) {
   $page = get_page_by_path( 'home' );
   $texto_cc = get_field('texto_cc', $page->ID);
   $texto_redes = get_field('texto_redes_sociais', $page->ID);
   $contato = "Contato";
+  $telegram = "http://t.me/capiremov_pt";
+
 }
 
 ?>
@@ -40,13 +45,12 @@ if ( $lang === 'en-US' ) {
                         </a>
                         <img class="d-none d-lg-block" src="<?php bloginfo('template_url'); ?>/images/cc.png" alt="">
                         <p class="d-none d-lg-block ex-small"><?php echo $texto_cc ?></p>
-
                     </div>
                 </div>
                 <div class="col-12 col-lg-2">
                     <p class="small">CAPIRE</p>
                     <?php  wp_nav_menu( array( 'menu' => 'footer', 'container' => FALSE, 'menu_class' => 'menu-footer', 'menu_id' => false ) ); ?>
-                    <a href="mailto:info@capiremov.com.br" class="contato"><?php echo $contato ?></a>
+                    <a href="mailto:info@capiremov.org" class="contato"><?php echo $contato ?></a>
                 </div>
                 <div class="col-12 col-lg-2">
                     <p class="small"><?php echo $texto_redes ?></p>
@@ -63,7 +67,11 @@ if ( $lang === 'en-US' ) {
                         <a href="https://www.youtube.com/channel/UCTS7q5yxlq7wQWp9wu2w-FQ/" class="youtube" target="_blank">
                             <span></span>
                         </a>
+                        <a href="<?php echo $telegram ?>" class="telegram" target="_blank">
+                            <span></span>
+                        </a>
                     </div>
+                    <p class="footer-email">info@capiremov.org</p>
                 </div>
 
                 <div class="col-12 col-lg-2 d-lg-none d-block mt-4">
@@ -74,9 +82,6 @@ if ( $lang === 'en-US' ) {
         </div>
     </div>
 </footer>
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

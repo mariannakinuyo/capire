@@ -10,6 +10,23 @@
     $categoria = get_the_category( $postID )[0]->name;
     $tags = get_the_tags();
     $link = get_permalink( $postID );
+    if ( $lang === 'en-US' ) {
+        $page = get_page_by_path( 'home-en' );
+        $text_share = get_field('texto_artigo_en', $page->ID);
+    
+    } elseif ( $lang === 'es' ) {
+        $page = get_page_by_path( 'home-es' );
+        $text_share = get_field('texto_artigo_es', $page->ID);
+    
+    } elseif ( $lang === 'fr-FR' ) {
+        $page = get_page_by_path( 'home-fr' );
+        $text_share = get_field('texto_artigo_fr', $page->ID);
+    
+    } elseif ( $lang === 'pt-BR' ) {
+        $page = get_page_by_path( 'home' );
+        $text_share = get_field('texto_artigo', $page->ID);
+    
+    }
 ?>
 
 <div class="container p-top">
@@ -69,10 +86,7 @@
                     <?php the_content(); ?>
                 </div>
                 
-                <div class="line-gradient mb-3 mt-4"></div>
-
-                <div class="infos-article">
-
+                <div class="infos-article text-right">
                     <?php if($traduzido) { ?>
                         <div class="author">
                             <?php echo $traduzido ?>
@@ -82,11 +96,13 @@
                             <?php echo $revisado ?>
                         </div>
                     <?php } ?>
+                </div>
 
-                    <div class="social-right">
-                        <?php componente_compartilhar() ?>
-                    </div>
+                <div class="line-gradient mb-3 mt-2"></div>
 
+                <div class="social-center">
+                    <p><?php echo $text_share ?></p>
+                    <?php componente_compartilhar() ?>
                 </div>
                 
             </div>
